@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbc88f93-a6aa-4dea-97cd-caa1865deba2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sl771687/Complexe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sl771687/Complexe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/Complexe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sl771687/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/Main.java" afterDir="false" />
     </list>
-    <list id="1465e3c2-6b0b-476f-97ff-68f4f2fbc517" name="Changes by drago" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/sl771687/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/Main.java" afterDir="false" />
-    </list>
+    <list id="1465e3c2-6b0b-476f-97ff-68f4f2fbc517" name="Changes by drago" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,16 +30,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/com/sl771687/Main.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="5" changelist="fbc88f93-a6aa-4dea-97cd-caa1865deba2" />
-        <range start1="4" end1="4" start2="7" end2="11" changelist="fbc88f93-a6aa-4dea-97cd-caa1865deba2" />
-        <range start1="5" end1="6" start2="12" end2="40" changelist="fbc88f93-a6aa-4dea-97cd-caa1865deba2" />
-        <range start1="7" end1="7" start2="41" end2="88" changelist="1465e3c2-6b0b-476f-97ff-68f4f2fbc517" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1zLpMNfypVnCCelXpNe7tc5Ciia" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -140,6 +129,7 @@
       <updated>1633937194546</updated>
       <workItem from="1633937194769" duration="709000" />
       <workItem from="1634903446046" duration="5875000" />
+      <workItem from="1634917660482" duration="897000" />
     </task>
     <servers />
   </component>

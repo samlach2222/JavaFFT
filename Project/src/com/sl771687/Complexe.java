@@ -1,6 +1,7 @@
 package com.sl771687;
 
 public class Complexe {
+
     private double real =0;
     private double imag =0; //real, imag sont des variables d'instances
 
@@ -35,5 +36,21 @@ public class Complexe {
             return real + "+i" + Math.abs(imag);
         else
             return real + "-i" + Math.abs(imag);
+    }
+
+    public double getImag() {
+        return imag;
+    }
+
+    public void setImag(double imag) {
+        this.imag = imag;
+    }
+
+    public double getReal() {
+        return real;
+    }
+
+    public void setReal(double real) {
+        this.real = real;
     }
 }
