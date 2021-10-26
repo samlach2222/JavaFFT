@@ -22,7 +22,7 @@ public class TF1D {
             // Création de la variable de somme des éléments du tableau
             Complexe additionLocale = new Complexe(0, 0);
             for (int j = 0; j < N; j++) {
-                double teta = -2.0 * Math.PI * i * j / N; // angle teta
+                double teta = (-2.0 * Math.PI * i * j) / N; // angle teta
                 double realPart = tableau1D.get(j).getReal() * Math.cos(teta); // partie réelle
                 double imagPart = tableau1D.get(j).getImag() * Math.sin(teta); // partie imaginaire
                 Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
@@ -45,15 +45,13 @@ public class TF1D {
         ArrayList<Complexe> resultat = new ArrayList<Complexe>();
         for (int x = 0; x < N; x++){
             Complexe c = new Complexe(0,0);
-            for (int u = 0; u < N-1; u++){
-                double i_MaisJeSaisPasAQuoiIlCorrespond = 1;
-                double valeurAExponentialise = (2*i_MaisJeSaisPasAQuoiIlCorrespond*Math.PI*u*x) / N;
-                //double reelle = tableauI1D.get(u)*Math.cos(valeurAExponentialise);
-                //double imaginaire = tableauI1D.get(u)*Math.sin(valeurAExponentialise);
+            for (int u = 0; u < N; u++){
+                double teta = (2*Math.PI*u*x)/ N;
+                double reelle = tableauI1D.get(u).getReal()*Math.cos(teta);
+                double imaginaire = tableauI1D.get(u).getImag()*Math.sin(teta);
 
-                //Complexe complexeAAjouter = new Complexe(reelle, imaginaire);
-
-                //c = c.add(complexeAAjouter);
+                Complexe complexeAAjouter = new Complexe(reelle, imaginaire);
+                c = c.add(complexeAAjouter);
 
             }
             resultat.add(c);
