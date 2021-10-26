@@ -16,8 +16,11 @@ public class Main {
         final int ranMin = -5;
         final int ranMax = 5;
         final int N = 20; // N = taille du tableau
-        ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();;
-        ArrayList<Complexe> tableauI1D = new ArrayList<Complexe>();;
+
+        ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
+        ArrayList<Complexe> tableauI1D = new ArrayList<Complexe>();
+
+        TF1D tf1d = new TF1D();
 
         /*------------------------*/
         /* Remplissage du tableau */
@@ -37,15 +40,17 @@ public class Main {
         /*-----------------------------------------------*/
         /* Affichage des resultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-        TF1D tf1d = new TF1D();
-
         System.out.println("Transformée 1D:");
         for (Complexe c : tf1d.Transformee1D(tableau1D)) {
             System.out.println(c.toString());
         }
-        /*System.out.println("Transformée inverse I1D:");
-        /*for (Complexe c : TransformeeInverse1D(tableauI1D)){
+
+        /*------------------------------------------------------*/
+        /* Affichage des resultats de TF1D.TransformeeInverse1D */
+        /*------------------------------------------------------*/
+        System.out.println("Transformée inverse I1D:");
+        for (Complexe c : tf1d.TransformeeInverse1D(tableauI1D)){
             System.out.println(c.toString());
-        }*/
+        }
     }
 }

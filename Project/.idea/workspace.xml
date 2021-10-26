@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbc88f93-a6aa-4dea-97cd-caa1865deba2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sl771687/TF1D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sl771687/TFR1D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sl771687/Complexe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/Complexe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sl771687/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sl771687/TF1D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/TF1D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sl771687/TFR1D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sl771687/TFR1D.java" afterDir="false" />
     </list>
     <list id="1465e3c2-6b0b-476f-97ff-68f4f2fbc517" name="Changes by drago" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +132,7 @@
       <workItem from="1634903446046" duration="5875000" />
       <workItem from="1634917660482" duration="1530000" />
       <workItem from="1635178811930" duration="5745000" />
-      <workItem from="1635228496511" duration="1451000" />
+      <workItem from="1635228496511" duration="9345000" />
     </task>
     <servers />
   </component>

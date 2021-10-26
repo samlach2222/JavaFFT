@@ -23,6 +23,14 @@ public class Complexe {
         return sum;
     }
 
+    public Complexe minus(Complexe c) {
+        //le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
+        Complexe sum = new Complexe();
+        sum.real = real - c.real;
+        sum.imag = imag - c.imag;
+        return sum;
+    }
+
     public Complexe multiply(Complexe c) {
         Complexe product = new Complexe();
         product.real = (real * c.real) - (imag * c.imag);
