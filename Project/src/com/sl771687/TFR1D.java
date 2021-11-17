@@ -39,7 +39,7 @@ public class TFR1D {
                 part2.add(tableauR1D.get(i));
             }
         }
-            if(part1.size() + part2.size() != N) {
+            if(part1.size() + part2.size() != N) { // quand PAS réuni en 1 seule partie
                 ArrayList<Complexe> resPart1 = TransformeeRapide1D(part1, N);
                 ArrayList<Complexe> resPart2 = TransformeeRapide1D(part2, N);
 
