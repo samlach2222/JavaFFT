@@ -1,7 +1,3 @@
-package com.sl771687;
-
-import com.sl771687.Complexe;
-
 import java.util.ArrayList;
 
 public class TFR1D {

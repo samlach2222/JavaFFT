@@ -1,5 +1,3 @@
-package com.sl771687;
-
 import java.util.ArrayList;
 
 public class TF1D {
