@@ -44,14 +44,19 @@ public class TF1D {
         // Création tableau resultat
         ArrayList<Complexe> resultat = new ArrayList<Complexe>();
 
-        //Pour chaque complexe dans le tableau 1D fourni
-        for (int j = 0; j < N; j++) {
-            double teta = (2.0 * Math.PI * j * N) / N; // angle teta
-            double realPart = tableauI1D.get(j).getReal() * Math.cos(teta); // partie réelle
-            double imagPart = tableauI1D.get(j).getImag() * Math.sin(teta); // partie imaginaire
+        for(int i = 0; i < N; i++) {
+            // Création de la variable de somme des éléments du tableau
+            Complexe additionLocale = new Complexe(0, 0);
+            for (int j = 0; j < N; j++) {
+                Complexe complexeTransformee = Transformee1D(tableauI1D).get(j);
+                double teta = (2.0 * Math.PI * i * j) / N; // angle teta
+                double realPart = complexeTransformee.getReal() * Math.acos(teta); // partie réelle
+                double imagPart = 0; // partie imaginaire
+                Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
 
-            Complexe complexeResultat = new Complexe(realPart, imagPart);
-            resultat.add(complexeResultat);
+                additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
+            }
+            resultat.add(additionLocale);
         }
 
         return resultat;
