@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class TFR1D {
 
+    private boolean debut = true;
+
     public TFR1D(){
 
     }
@@ -39,11 +41,20 @@ public class TFR1D {
                 part2.add(tableauR1D.get(i));
             }
         }
-            if(part1.size() + part2.size() != N) { // quand PAS réuni en 1 seule partie
-                ArrayList<Complexe> resPart1 = TransformeeRapide1D(part1, N);
-                ArrayList<Complexe> resPart2 = TransformeeRapide1D(part2, N);
+            //if(part1.size() != N && part2.size() != N || debut) { // quand PAS réuni en 1 seule partie
 
+                ArrayList<Complexe> resPart1;
+                ArrayList<Complexe> resPart2;
+                if(part1.size() != 2 && part2.size() != 2){
+                    resPart1 = TransformeeRapide1D(part1, N);
+                    resPart2 = TransformeeRapide1D(part2, N);
+                }
+                else {
+                    resPart1 = part1;
+                    resPart2 = part2;
+                }
                 if(resPart1.size() == 2 && resPart2.size() == 2){
+
                     // Cas le plus bas dans l'arbre
                     res.add(resPart1.get(0).add(resPart1.get(1).multiply(new Complexe(c,0))));
                     res.add(resPart1.get(0).minus(resPart1.get(1).multiply(new Complexe(c,0))));
@@ -51,15 +62,24 @@ public class TFR1D {
                     res.add(resPart2.get(0).add(resPart2.get(1).multiply(new Complexe(c,0))));
                     res.add(resPart2.get(0).minus(resPart2.get(1).multiply(new Complexe(c,0))));
                 }
-                else{
-                    // les autres cas
-                    res.add(resPart1.get(0).add(resPart2.get(0).multiply(new Complexe(c,0))));
-                    res.add(resPart1.get(1).add(resPart2.get(1).multiply(new Complexe(c,0))));
+                else {
+                        // les autres cas
+                        for(int i = 0; i < resPart1.size() - 2; i++){
+                            res.add(resPart1.get(i).add(resPart2.get(i).multiply(new Complexe(c,0))));
+                            res.add(resPart1.get(i+1).add(resPart2.get(i+1).multiply(new Complexe(c,0))));
 
-                    res.add(resPart1.get(0).minus(resPart2.get(0).multiply(new Complexe(c,0))));
-                    res.add(resPart1.get(1).minus(resPart2.get(1).multiply(new Complexe(c,0))));
+                            res.add(resPart1.get(i).minus(resPart2.get(i).multiply(new Complexe(c,0))));
+                            res.add(resPart1.get(i+1).minus(resPart2.get(i+1).multiply(new Complexe(c,0))));
+                        }
                 }
-            }
+                if(resPart1.size() + resPart2.size() == 8){
+                    System.out.println(res.toString());
+                    System.out.println("------");
+                }
+                else
+                {
+                    System.out.println("chaud");
+                }
         return res;
     }
 }
