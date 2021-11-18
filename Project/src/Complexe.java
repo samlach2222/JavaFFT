@@ -21,6 +21,15 @@ public class Complexe {
         return sum;
     }
 
+    public Complexe divide(Complexe c){
+        double x = this.real * c.real + this.imag * c.imag;
+        double y = this.imag * c.real - this.real * c.imag;
+        double z = c.real * c.real + c.imag * c.imag;
+        this.real = x / z;
+        this.imag = y / z;
+        return this;
+    }
+
     public Complexe minus(Complexe c) {
         //le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
         Complexe sum = new Complexe();

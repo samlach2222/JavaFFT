@@ -60,7 +60,7 @@ public class Main {
         /* Affichage des resultats de TFR1D.TransformeeRapide1D */
         /*------------------------------------------------------*/
         System.out.println("Transformée rapide I1D:");
-        for (Complexe c : tfr1d.TransformeeRapide1D(tableauI1D,N)){
+        for (Complexe c : tfr1d.TransformeeRapide1D(tableauI1D,-1)){
             System.out.println(c.toString());
         }
     }
