@@ -1,5 +1,3 @@
-package com.sl771687;
-
 public class Complexe {
 
     private double real =0;
