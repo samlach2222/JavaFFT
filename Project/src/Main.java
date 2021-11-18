@@ -30,24 +30,26 @@ public class Main {
         /*------------------------*/
         /*   DEBUG INSERT VALUES  */
         /*------------------------*/
-        tableauI1D.add(new Complexe(-1.0,0));
-        tableauI1D.add(new Complexe(0.0,0));
-        tableauI1D.add(new Complexe(1.0,0));
-        tableauI1D.add(new Complexe(-1.0,0));
-        tableauI1D.add(new Complexe(-1.0,0));
-        tableauI1D.add(new Complexe(0.0,0));
-        tableauI1D.add(new Complexe(1.0,0));
-        tableauI1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(0.0,0));
+        tableau1D.add(new Complexe(1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(0.0,0));
+        tableau1D.add(new Complexe(1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
 
         // test Inverse
-        /*tableauI1D.add(new Complexe(-2.0,0.0));
-        tableauI1D.add(new Complexe(0.0,0.0));
-        tableauI1D.add(new Complexe(-4.0,0.0));
-        tableauI1D.add(new Complexe(0.0,0.0));
-        tableauI1D.add(new Complexe(2.0,0.0));
-        tableauI1D.add(new Complexe(0.0,0.0));
-        tableauI1D.add(new Complexe(-4.0,0.0));
-        tableauI1D.add(new Complexe(0.0,0.0));*/
+        /*
+        tableau1D.add(new Complexe(-2.0,0.0));
+        tableau1D.add(new Complexe(0.0,0.0));
+        tableau1D.add(new Complexe(-4.0,0.0));
+        tableau1D.add(new Complexe(0.0,0.0));
+        tableau1D.add(new Complexe(2.0,0.0));
+        tableau1D.add(new Complexe(0.0,0.0));
+        tableau1D.add(new Complexe(-4.0,0.0));
+        tableau1D.add(new Complexe(0.0,0.0));
+        */
 
         /*------------------------------*/
         /* Affichage du tableau de base */
@@ -60,11 +62,12 @@ public class Main {
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-        System.out.println("Transformée 1D:");
-		    ArrayList<Complexe> tableauDontLinverseDoitRevenirSur_tableau1D = TF1D.Transformee1D(tableau1D);
+        ArrayList<Complexe> tableauDontLinverseDoitRevenirSur_tableau1D = TF1D.Transformee1D(tableau1D);
+
+        /*System.out.println("Transformée 1D:");
         for (Complexe c : tableauDontLinverseDoitRevenirSur_tableau1D) {
             System.out.println(c.toString());
-        }
+        }*/
 
         /*------------------------------------------------------*/
         /* Affichage des résultats de TF1D.TransformeeInverse1D */
@@ -78,7 +81,7 @@ public class Main {
         /* Affichage des résultats de TFR1D.TransformeeRapide1D */
         /*------------------------------------------------------*/
         System.out.println("Transformée rapide I1D:");
-        for (Complexe c : TFR1D.TransformeeRapide1D(tableauI1D,-1)){
+        for (Complexe c : TFR1D.TransformeeRapide1D(tableauDontLinverseDoitRevenirSur_tableau1D,1)){
             System.out.println(c.toString());
         }
     }
