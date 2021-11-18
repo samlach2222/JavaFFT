@@ -10,6 +10,7 @@ public final class TF1D {
 
     /**
      * Constructeur de la classe TF1D
+     * @throws Exception si quelqu'un essaye d'utiliser le constructeur de la classe statique
      */
     private TF1D() throws Exception {
         throw new Exception("Cette classe est statique et ne doit pas être initialiser");

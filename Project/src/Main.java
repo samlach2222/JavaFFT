@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 
+/**
+ * Classe Main
+ */
 public class Main {
+    /**
+     * Méthode principale
+     * @param args arguments de lancement
+     */
     public static void main(String[] args) {
         /*--------------------------*/
         /* Initialisation attributs */
