@@ -103,7 +103,8 @@ public class TFR1D {
         tableauTemp = CalculTransformeeRapide1D(tableauTemp, SensTransformee);
 
         // Il faut ré-inverser l'ordre du tableau pour obtenir le résultat du calcul
-        ArrayList<Complexe> resultatTransformee = InversionTableau(tableauTemp);
+        //ArrayList<Complexe> resultatTransformee = InversionTableau(tableauTemp);
+        ArrayList<Complexe> resultatTransformee = tableauTemp;
 
         // si le sens de la transformée est inverse, on divise chaque élément du tableau par la taille du tableau
         if(SensTransformee == 1){
@@ -131,7 +132,6 @@ public class TFR1D {
                 part2.add(null);
             }
 
-            // TODO: 18/11/2021 Bug ici, la part1 ne se remplis pas
             for(int i = 0; i < tableauR1D.size(); i++) {
                 if (i % 2 != 0) { // si rang impaire
                     part1.set(i / 2, tableauR1D.get(i));
@@ -146,9 +146,10 @@ public class TFR1D {
             ArrayList<Complexe> resPart2 = this.CalculTransformeeRapide1D(part2, SensTransformee);
 
             // On applique alors la formule de la transformée
-            for(int u = 1; u < tailleTableau / 2; u++){
-                // coef = exp( ( SensFFT * 2 * %i * %pi * u ) / Width )
-                Complexe coef = new Complexe(Math.exp(SensTransformee * 2), Math.PI * u / tailleTableau); // surement incorrect
+            for(int u = 0; u < tailleTableau / 2; u++){
+                double teta = SensTransformee * 2 * Math.PI * u / tailleTableau;
+                Complexe coef = new Complexe(Math.cos(teta), Math.sin(teta));
+
                 tableauTransforme.set(u,resPart1.get(u).add(coef.multiply(resPart2.get(u))));
                 tableauTransforme.set(u + (tailleTableau / 2),resPart1.get(u).minus(coef.multiply(resPart2.get(u))));
             }
@@ -162,8 +163,8 @@ public class TFR1D {
         for(int x = 0; x < tailleTableau; x++){ // initialisation tableau
             nouveauTableau.add(null);
         }
-        for(int i = 1; i < tailleTableau - 1; i++){
-            nouveauTableau.set(i,tableau.get(tailleTableau - i));
+        for(int i = 0; i < tailleTableau ; i++){
+            nouveauTableau.set(i,tableau.get((tailleTableau - 1) - i));
         }
         return nouveauTableau;
     }

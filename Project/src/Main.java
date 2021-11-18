@@ -39,6 +39,16 @@ public class Main {
         tableauI1D.add(new Complexe(1.0,0));
         tableauI1D.add(new Complexe(-1.0,0));
 
+        // test Inverse
+        /*tableauI1D.add(new Complexe(-2.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(-4.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(2.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(-4.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));*/
+
         /*-----------------------------------------------*/
         /* Affichage des resultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
@@ -48,7 +58,7 @@ public class Main {
         }
 
         /*------------------------------------------------------*/
-        /* Affichage des resultats de TF1D.TransformeeInverse1D */
+        /* Affichage des résultats de TF1D.TransformeeInverse1D */
         /*------------------------------------------------------*/
         /*System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.TransformeeInverse1D(tableauI1D)){
@@ -56,7 +66,7 @@ public class Main {
         }*/
 
         /*------------------------------------------------------*/
-        /* Affichage des resultats de TFR1D.TransformeeRapide1D */
+        /* Affichage des résultats de TFR1D.TransformeeRapide1D */
         /*------------------------------------------------------*/
         System.out.println("Transformée rapide I1D:");
         for (Complexe c : tfr1d.TransformeeRapide1D(tableauI1D,-1)){
