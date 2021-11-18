@@ -38,10 +38,12 @@ public class Complexe {
 
     public String toString() {
         // exemple de la méthode prépondérante
+        double roundReal = Math.round(this.real*100.0)/100.0;
+        double roundImag = Math.round(this.real*100.0)/100.0;
         if (imag>=0)
-            return real + "+i" + Math.abs(imag);
+            return roundReal + "+i" + Math.abs(roundImag);
         else
-            return real + "-i" + Math.abs(imag);
+            return roundReal + "-i" + Math.abs(roundImag);
     }
 
     public double getImag() {
