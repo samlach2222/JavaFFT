@@ -1,13 +1,22 @@
 import java.util.ArrayList;
 
+/**
+ * Classe pour la Transormée de Fourrier 1D et 1D Inverse
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
+ * @version 1.3
+ */
 public final class TF1D {
 
-    //La classe est statique
+    /**
+     * Constructeur de la classe TF1D
+     */
     private TF1D() throws Exception {
         throw new Exception("Cette classe est statique et ne doit pas être initialiser");
     }
 
     /**
+     * Méthode permettant de calculer la Transformée de Fourrier 1D
      * @param tableau1D tableau 1D de valeurs auquel on veut appliquer la transformée 1D
      * @return le résultat de la Transformée de Fourrier 1D
      */
@@ -34,6 +43,7 @@ public final class TF1D {
     }
 
     /**
+     * Méthode permettant de calculer la Transformée de Fourrier 1D Inverse
      * @param tableauI1D tableau 1D de valeurs auquel on veut appliquer la transformée inverse 1D
      * @return Le résultat de la transformation inverse 1D
      */
