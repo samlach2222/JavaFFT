@@ -50,7 +50,7 @@ public class Main {
         tableauI1D.add(new Complexe(0.0,0.0));*/
 
         /*-----------------------------------------------*/
-        /* Affichage des resultats de TF1D.Transformee1D */
+        /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
         System.out.println("Transformée 1D:");
         for (Complexe c : TF1D.Transformee1D(tableauI1D)) {
