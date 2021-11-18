@@ -6,7 +6,13 @@
  */
 public class Complexe {
 
+    /**
+     * partie réelle du complexe
+     */
     private double real =0;
+    /**
+     * partie imaginaire du complexe
+     */
     private double imag =0; //real, imag sont des variables d'instances
 
     /**

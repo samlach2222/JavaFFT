@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -8,10 +7,9 @@ import java.util.ArrayList;
  */
 public final class TFR1D {
 
-    private boolean debut = true;
-
     /**
      * Constructeur de la classe TFR1D
+     * @throws  Exception si quelqu'un essaye d'utiliser le constructeur de la classe statique
      */
     private TFR1D() throws Exception{
         throw new Exception("Cette classe est statique et ne doit pas être initialiser");
