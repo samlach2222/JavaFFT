@@ -33,9 +33,21 @@ public class Main {
         tableau1D.add(new Complexe(-1.0,0));
         tableau1D.add(new Complexe(0.0,0));
         tableau1D.add(new Complexe(1.0,0));
-        tableauI1D.add(new Complexe(0.0,0));
-        tableauI1D.add(new Complexe(-1.5,0));
-        tableauI1D.add(new Complexe(-1.5,0));
+        tableau1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
+        tableau1D.add(new Complexe(0.0,0));
+        tableau1D.add(new Complexe(1.0,0));
+        tableau1D.add(new Complexe(-1.0,0));
+
+        // test Inverse
+        /*tableauI1D.add(new Complexe(-2.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(-4.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(2.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));
+        tableauI1D.add(new Complexe(-4.0,0.0));
+        tableauI1D.add(new Complexe(0.0,0.0));*/
 
         /*------------------------------*/
         /* Affichage du tableau de base */
@@ -49,8 +61,8 @@ public class Main {
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
         System.out.println("Transformée 1D:");
-		//ArrayList<Complexe> tableauDontLinverseDoitRevenirSur_tableau1D = TF1D.Transformee1D(tableau1D);
-        for (Complexe c : TF1D.Transformee1D(tableau1D)) {
+		ArrayList<Complexe> tableauDontLinverseDoitRevenirSur_tableau1D = TF1D.Transformee1D(tableau1D);
+        for (Complexe c : tableauDontLinverseDoitRevenirSur_tableau1D) {
             System.out.println(c.toString());
         }
 
@@ -58,7 +70,7 @@ public class Main {
         /* Affichage des résultats de TF1D.TransformeeInverse1D */
         /*------------------------------------------------------*/
         System.out.println("Transformée inverse I1D:");
-        for (Complexe c : TF1D.TransformeeInverse1D(tableauI1D)){
+        for (Complexe c : TF1D.TransformeeInverse1D(tableauDontLinverseDoitRevenirSur_tableau1D)){
             System.out.println(c.toString());
         }
 

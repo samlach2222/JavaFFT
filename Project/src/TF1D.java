@@ -60,11 +60,12 @@ public final class TF1D {
             for (int j = 0; j < N; j++) {
                 double teta = (2.0 * Math.PI * i * j) / N; // angle teta
                 double realPart = tableauI1D.get(j).getReal() * Math.cos(teta);  //partie réelle
-                double imagPart = 0;  //partie imaginaire = tableauI1D.get(j).getReal() * Math.sin(teta)
+                double imagPart = tableauI1D.get(j).getReal() * Math.sin(teta);  //partie imaginaire
                 Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
 
                 additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
             }
+            additionLocale = additionLocale.multiply(new Complexe((double) 1/N, 0));
 
             resultat.add(additionLocale);
         }
