@@ -41,7 +41,7 @@ public final class TF1D {
         // Récupération de la taille du tableau
         int N = tableauI1D.size();
         // Création tableau resultat
-        ArrayList<Complexe> resultat = new ArrayList<Complexe>(tableauI1D);
+        ArrayList<Complexe> resultat = new ArrayList<Complexe>();
 
         for(int i = 0; i < N; i++) {
             // Création de la variable de somme des éléments du tableau
@@ -54,8 +54,8 @@ public final class TF1D {
 
                 additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
             }
-            resultat.set(i, additionLocale);
 
+            resultat.add(additionLocale);
         }
 
         return resultat;
