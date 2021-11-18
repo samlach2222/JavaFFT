@@ -110,7 +110,7 @@ public class TFR1D {
         if(SensTransformee == 1){
             for(int i =0; i < tableauR1D.size(); i++){
                 Complexe c = new Complexe(tableauR1D.size(), 0);
-                resultatTransformee.set(i, resultatTransformee.get(i).divide(c));
+                //resultatTransformee.set(i, resultatTransformee.get(i).divide(c)); //TODO à décommenter
             }
         }
 

@@ -38,12 +38,20 @@ public class Main {
         tableauI1D.add(new Complexe(-1.5,0));
         tableauI1D.add(new Complexe(-1.5,0));
 
+        /*------------------------------*/
+        /* Affichage du tableau de base */
+        /*------------------------------*/
+        System.out.println("Tableau par défaut:");
+        for (Complexe c : tableau1D){
+            System.out.println(c);
+        }
+
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
         System.out.println("Transformée 1D:");
 		//ArrayList<Complexe> tableauDontLinverseDoitRevenirSur_tableau1D = TF1D.Transformee1D(tableau1D);
-        for (Complexe c : TF1D.Transformee1D(tableauI1D)) {
+        for (Complexe c : TF1D.Transformee1D(tableau1D)) {
             System.out.println(c.toString());
         }
 

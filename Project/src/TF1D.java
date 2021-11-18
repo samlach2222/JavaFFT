@@ -47,10 +47,9 @@ public final class TF1D {
             // Création de la variable de somme des éléments du tableau
             Complexe additionLocale = new Complexe(0, 0);
             for (int j = 0; j < N; j++) {
-                Complexe complexeTransformee = tableauI1D.get(j);
                 double teta = (2.0 * Math.PI * i * j) / N; // angle teta
-                double realPart = (double) 1/3 * complexeTransformee.getReal() * Math.cos(teta); // partie réelle
-                double imagPart = 0; // partie imaginaire
+                double realPart = tableauI1D.get(j).getReal() * Math.cos(teta);  //partie réelle
+                double imagPart = 0;  //partie imaginaire = tableauI1D.get(j).getReal() * Math.sin(teta)
                 Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
 
                 additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
