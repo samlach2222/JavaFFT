@@ -45,28 +45,15 @@ public class TF1D {
         for(int i = 0; i < N; i++) {
             // Création de la variable de somme des éléments du tableau
             Complexe additionLocale = new Complexe(0, 0);
-            switch (i) {
-                case 0:
-                    additionLocale = additionLocale.add(new Complexe(-1.0,0));
-                    break;
-                case 1:
-                    additionLocale = additionLocale.add(new Complexe(0.0,0));
-                    break;
-                case 2:
-                    additionLocale = additionLocale.add(new Complexe(1.0,0));
-                    break;
-            }
-            /*
             for (int j = 0; j < N; j++) {
                 Complexe complexeTransformee = tableauI1D.get(j);
                 double teta = (2.0 * Math.PI * i * j) / N; // angle teta
-                double realPart = complexeTransformee.getReal() * Math.cos(teta); // partie réelle
+                double realPart = (double) 1/3 * complexeTransformee.getReal() * Math.cos(teta); // partie réelle
                 double imagPart = 0; // partie imaginaire
                 Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
 
                 additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
             }
-            */
             resultat.set(i, additionLocale);
 
         }
