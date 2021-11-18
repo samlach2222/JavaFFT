@@ -1,10 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.lang.Math;
-import java.util.Collection;
-import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,8 +11,6 @@ public class Main {
 
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
         ArrayList<Complexe> tableauI1D = new ArrayList<Complexe>();
-
-        TFR1D tfr1d = new TFR1D();
 
         /*------------------------*/
         /* Remplissage du tableau */
@@ -67,7 +59,7 @@ public class Main {
         /* Affichage des résultats de TFR1D.TransformeeRapide1D */
         /*------------------------------------------------------*/
         /*System.out.println("Transformée rapide I1D:");
-        for (Complexe c : tfr1d.TransformeeRapide1D(tableauI1D,-1)){
+        for (Complexe c : TFR1D.TransformeeRapide1D(tableauI1D,-1)){
             System.out.println(c.toString());
         }*/
     }
