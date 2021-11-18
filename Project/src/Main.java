@@ -18,7 +18,6 @@ public class Main {
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
         ArrayList<Complexe> tableauI1D = new ArrayList<Complexe>();
 
-        TF1D tf1d = new TF1D();
         TFR1D tfr1d = new TFR1D();
 
         /*------------------------*/
@@ -44,7 +43,7 @@ public class Main {
         /* Affichage des resultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
         System.out.println("Transformée 1D:");
-        for (Complexe c : tf1d.Transformee1D(tableauI1D)) {
+        for (Complexe c : TF1D.Transformee1D(tableauI1D)) {
             System.out.println(c.toString());
         }
 
@@ -52,7 +51,7 @@ public class Main {
         /* Affichage des resultats de TF1D.TransformeeInverse1D */
         /*------------------------------------------------------*/
         /*System.out.println("Transformée inverse I1D:");
-        for (Complexe c : tf1d.TransformeeInverse1D(tableauI1D)){
+        for (Complexe c : TF1D.TransformeeInverse1D(tableauI1D)){
             System.out.println(c.toString());
         }*/
 

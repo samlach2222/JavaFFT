@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 
-public class TF1D {
+public final class TF1D {
 
-    public TF1D(){
-
+    //La classe est statique
+    private TF1D() throws Exception {
+        throw new Exception("Cette classe est statique et ne doit pas être initialiser");
     }
 
     /**
      * @param tableau1D tableau 1D de valeurs auquel on veut appliquer la transformée 1D
      * @return le résultat de la Transformée de Fourrier 1D
      */
-    public ArrayList<Complexe> Transformee1D(ArrayList<Complexe> tableau1D){
+    public static ArrayList<Complexe> Transformee1D(ArrayList<Complexe> tableau1D){
         // Récupération de la taille du tableau
         int N = tableau1D.size();
         // Création tableau resultats
@@ -36,7 +37,7 @@ public class TF1D {
      * @param tableauI1D tableau 1D de valeurs auquel on veut appliquer la transformée inverse 1D
      * @return Le résultat de la transformation inverse 1D
      */
-    public ArrayList<Complexe> TransformeeInverse1D(ArrayList<Complexe> tableauI1D){
+    public static ArrayList<Complexe> TransformeeInverse1D(ArrayList<Complexe> tableauI1D){
         // Récupération de la taille du tableau
         int N = tableauI1D.size();
 
