@@ -84,7 +84,7 @@ public class Complexe {
     public Complexe multiply(Complexe c) {
         Complexe product = new Complexe();
         product.real = (real * c.real) - (imag * c.imag);
-        product.imag = (real * c.imag) + (imag * c.imag);
+        product.imag = (real * c.imag) + (imag * c.real);
         return product;
     }
 
