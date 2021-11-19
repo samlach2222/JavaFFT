@@ -2,76 +2,76 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-Project/.idea/**/workspace.xml
-Project/.idea/**/tasks.xml
-Project/.idea/**/usage.statistics.xml
-Project/.idea/**/dictionaries
-Project/.idea/**/shelf
+FFT_Java/.idea/**/workspace.xml
+FFT_Java/.idea/**/tasks.xml
+FFT_Java/.idea/**/usage.statistics.xml
+FFT_Java/.idea/**/dictionaries
+FFT_Java/.idea/**/shelf
 
 # AWS User-specific
-Project/.idea/**/aws.xml
+FFT_Java/.idea/**/aws.xml
 
 # Generated files
-Project/.idea/**/contentModel.xml
+FFT_Java/.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
-Project/.idea/**/dataSources/
-Project/.idea/**/dataSources.ids
-Project/.idea/**/dataSources.local.xml
-Project/.idea/**/sqlDataSources.xml
-Project/.idea/**/dynamic.xml
-Project/.idea/**/uiDesigner.xml
-Project/.idea/**/dbnavigator.xml
+FFT_Java/.idea/**/dataSources/
+FFT_Java/.idea/**/dataSources.ids
+FFT_Java/.idea/**/dataSources.local.xml
+FFT_Java/.idea/**/sqlDataSources.xml
+FFT_Java/.idea/**/dynamic.xml
+FFT_Java/.idea/**/uiDesigner.xml
+FFT_Java/.idea/**/dbnavigator.xml
 
 # Gradle
-Project/.idea/**/gradle.xml
-Project/.idea/**/libraries
+FFT_Java/.idea/**/gradle.xml
+FFT_Java/.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
-# Project/.idea/artifacts
-# Project/.idea/compiler.xml
-# Project/.idea/jarRepositories.xml
-# Project/.idea/modules.xml
-# Project/.idea/*.iml
-# Project/.idea/modules
-# Project/*.iml
-# Project/*.ipr
+# FFT_Java/.idea/artifacts
+# FFT_Java/.idea/compiler.xml
+# FFT_Java/.idea/jarRepositories.xml
+# FFT_Java/.idea/modules.xml
+# FFT_Java/.idea/*.iml
+# FFT_Java/.idea/modules
+# FFT_Java/*.iml
+# FFT_Java/*.ipr
 
 # CMake
-Project/cmake-build-*/
+FFT_Java/cmake-build-*/
 
 # Mongo Explorer plugin
-Project/.idea/**/mongoSettings.xml
+FFT_Java/.idea/**/mongoSettings.xml
 
 # File-based project format
-Project/*.iws
+FFT_Java/*.iws
 
 # IntelliJ
-Project/out/
+FFT_Java/out/
 
 # mpeltonen/sbt-idea plugin
-Project/.idea_modules/
+FFT_Java/.idea_modules/
 
 # JIRA plugin
-Project/atlassian-ide-plugin.xml
+FFT_Java/atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-Project/.idea/replstate.xml
+FFT_Java/.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-Project/com_crashlytics_export_strings.xml
-Project/crashlytics.properties
-Project/crashlytics-build.properties
-Project/fabric.properties
+FFT_Java/com_crashlytics_export_strings.xml
+FFT_Java/crashlytics.properties
+FFT_Java/crashlytics-build.properties
+FFT_Java/fabric.properties
 
 # Editor-based Rest Client
-Project/.idea/httpRequests
+FFT_Java/.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-Project/.idea/caches/build_file_checksums.ser
+FFT_Java/.idea/caches/build_file_checksums.ser
 
 # Fichier inutile qui apparait à cause d'un plugin non-utilisé
-Project/.idea/runConfigurations.xml
+FFT_Java/.idea/runConfigurations.xml
