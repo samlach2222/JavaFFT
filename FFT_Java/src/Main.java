@@ -23,8 +23,7 @@ public class Main {
         /*----------------------------------------------------*/
         /*
         for(int i = 0; i < N; i++) {
-			      tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // nonbre complexe aléatoire entre -5 et 5 sur ses deux parties
-            tableauI1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // nonbre complexe aléatoire entre -5 et 5 sur ses deux parties
+	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // nonbre complexe aléatoire entre -5 et 5 sur ses deux parties
         }
         */
 
@@ -55,14 +54,14 @@ public class Main {
 
         OU
 
-        tableauI1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
-        tableauI1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableauI1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
-        tableauI1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
-        tableauI1D.add(new Complexe(2.0,0.0));  // -1.0 + i0.0
-        tableauI1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableauI1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
-        tableauI1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
+        tableau1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
+        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
+        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
+        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
+        tableau1D.add(new Complexe(2.0,0.0));  // -1.0 + i0.0
+        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
+        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
+        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
         */
 
         // PERMET DE METTRE LA TRANSFORMEE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMEE INVERSE
@@ -115,7 +114,7 @@ public class Main {
         /*----------------------------------------------------------------------*/
         /*
         System.out.println("Transformée rapide I1D:");
-        for (Complexe c : TFR1D.TransformeeRapide1D(tableauI1D,1)){
+        for (Complexe c : TFR1D.TransformeeRapide1D(tableau1D,1)){
             System.out.println(c.toString());
         }
         */
