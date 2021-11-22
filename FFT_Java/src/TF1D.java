@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Classe pour la Transormée de Fourier 1D et 1D Inverse
+ * Classe pour la Transformée de Fourier 1D et 1D Inverse
  * @author Loïs PAZOLA
  * @author Samuel LACHAUD
  * @version 1.3

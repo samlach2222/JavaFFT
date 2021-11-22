@@ -1,5 +1,5 @@
 /**
- * Classe gérant un nombre complexe composée d'une partie réelle et une partie imaginaire
+ * Classe gérant un nombre complexe composée d'une partie réelle et d'une partie imaginaire
  * Elle décrit également les différentes opérations que l'on peut lui appliquer (addition, soustraction, multiplication, division)
  * @author Samuel LACHAUD
  * @version 1.1
@@ -7,11 +7,11 @@
 public class Complexe {
 
     /**
-     * partie réelle du complexe
+     * Partie réelle du complexe
      */
     private double real = 0;
     /**
-     * partie imaginaire du complexe
+     * Partie imaginaire du complexe
      */
     private double imag = 0; // real, imag sont des variables d'instances
 
@@ -39,7 +39,7 @@ public class Complexe {
     /**
      * Méthode permettant d'ajouter un complexe à celui-ci
      * @param c complexe à ajouter
-     * @return retourne la somme des deux complexes
+     * @return la somme des deux complexes
      */
     public Complexe add(Complexe c) {
         // Le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
@@ -65,7 +65,7 @@ public class Complexe {
 
     /**
      * Méthode permettant de soustraire à ce complexe celui passé en paramètre
-     * @param c nombre qui soustrait le complexe
+     * @param c complexe à soustraire
      * @return le reste de la soustraction
      */
     public Complexe minus(Complexe c) {
@@ -78,7 +78,7 @@ public class Complexe {
 
     /**
      * Méthode permettant de multiplier ce complexe par celui en paramètre
-     * @param c nombre qui multiplie
+     * @param c multiplicateur de l'opération
      * @return le produit des deux complexes
      */
     public Complexe multiply(Complexe c) {
@@ -90,7 +90,7 @@ public class Complexe {
 
     /**
      * Méthode permettant de retourner sous forme de String un nombre complexe sous la forme x.x+iy.y
-     * @return le nombre compexe en chaine de caractères
+     * @return le nombre complexe en chaine de caractères
      */
     public String toString() {
         // Exemple de la méthode prépondérante
