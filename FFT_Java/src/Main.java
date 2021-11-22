@@ -51,17 +51,6 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
-
-        OU
-
-        tableau1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
-        tableau1D.add(new Complexe(2.0,0.0));  // -1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
         */
 
         // PERMET DE METTRE LA TRANSFORMEE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMEE INVERSE
