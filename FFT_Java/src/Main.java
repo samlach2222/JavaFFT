@@ -32,6 +32,7 @@ public class Main {
         /*------------------------*/
 
         // Valeurs initiales --> valeurs transformées (TF)
+  /*
         tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
@@ -40,10 +41,11 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
+*/
 
 
         // Valeurs transformées --> valeurs initiales (TFI)
-        /*
+
         tableau1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
@@ -52,7 +54,8 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
-        */
+
+
 
         // PERMET DE METTRE LA TRANSFORMÉE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMÉE INVERSE
         //tableau1D = TF1D.Transformee1D(tableau1D, -1);
@@ -92,12 +95,12 @@ public class Main {
         /*------------------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
         /*------------------------------------------------------*/
-        /*
+
         System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
         }
-        */
+
 
 
 
