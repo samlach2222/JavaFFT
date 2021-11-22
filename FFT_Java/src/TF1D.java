@@ -31,7 +31,7 @@ public final class TF1D {
         for(int i = 0; i < N; i++) {
             // Création de la variable de somme des éléments du tableau
             Complexe additionLocale = new Complexe(0, 0);
-            for (int j = 0; j < N; j++) {
+            for (int j = 0; j < N ; j++) {
                 double teta = (sensTransformee * 2.0 * Math.PI * i * j) / N; // angle teta
                 double realPart = tableau1D.get(j).getReal() * Math.cos(teta); // partie réelle
                 double imagPart = tableau1D.get(j).getImag() * Math.sin(teta); // partie imaginaire

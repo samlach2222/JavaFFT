@@ -14,13 +14,14 @@ public class Main {
         /*--------------------------*/
         final int ranMin = -5;
         final int ranMax = 5;
-        final int N = 8; // N = taille du tableau
+        int N = 8; // N = taille du tableau
 
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
 
         /*----------------------------------------------------*/
         /* Remplissage du tableau avec des valeurs aléatoires */
         /*----------------------------------------------------*/
+
         /*
         for(int i = 0; i < N; i++) {
 	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // nonbre complexe aléatoire entre -5 et 5 sur ses deux parties
@@ -32,6 +33,7 @@ public class Main {
         /*------------------------*/
 
         // Valeurs initiales --> valeur transformées (TF)
+
         tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
@@ -40,6 +42,7 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
+
 
         // Valeurs transformées --> valeurs initiales (TFI)
         /*
@@ -54,7 +57,7 @@ public class Main {
         */
 
         // PERMET DE METTRE LA TRANSFORMEE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMEE INVERSE
-        tableau1D = TF1D.Transformee1D(tableau1D, -1);
+        //tableau1D = TF1D.Transformee1D(tableau1D, -1);
 
         /*----------------------------------------*/
         /* Affichage du tableau avant transfomrée */
@@ -91,10 +94,10 @@ public class Main {
         /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
         /*------------------------------------------------------*/
 
-        System.out.println("Transformée inverse I1D:");
+        /*System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
-        }
+        }*/
 
 
 
@@ -108,5 +111,47 @@ public class Main {
         }
         */
 
+        /*----------------------------------------------------------------------*/
+        /*----------------------------------------------------------------------*/
+        /*                        CALCUL DU TEMPS D'EXECUTION                   */
+        /*----------------------------------------------------------------------*/
+        /*----------------------------------------------------------------------*/
+
+        /*
+        N = (int) Math.pow(2,14); // pour avoir une réelle différence sur le temps d'exécution
+        tableau1D.clear();
+        for(int i = 0; i < N; i++) {
+            tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // nonbre complexe aléatoire entre -5 et 5 sur ses deux parties
+        }
+
+        long startTF1D = System.nanoTime();
+        tableau1D = TF1D.Transformee1D(tableau1D, -1);
+        long stopTF1D = System.nanoTime();
+        long timeElapsedTF1D = stopTF1D - startTF1D;
+        System.out.println("TF1D Time : " + timeElapsedTF1D + " nanosecondes");
+
+        long startTFI1D = System.nanoTime();
+        tableau1D = TF1D.Transformee1D(tableau1D, 1);
+        long stopTFI1D = System.nanoTime();
+        long timeElapsedTFI1D = stopTFI1D - startTFI1D;
+        System.out.println("TFI1D Time : " + timeElapsedTFI1D + " nanosecondes");
+
+        long startTFR1D = System.nanoTime();
+        tableau1D = TFR1D.TransformeeRapide1D(tableau1D, -1);
+        long stopTFR1D = System.nanoTime();
+        long timeElapsedTFR1D = stopTFR1D - startTFR1D;
+        System.out.println("TFR1D Time : " + timeElapsedTFR1D + " nanosecondes");
+
+        long startTFRI1D = System.nanoTime();
+        tableau1D = TFR1D.TransformeeRapide1D(tableau1D, 1);
+        long stopTFRI1D = System.nanoTime();
+        long timeElapsedTFRI1D = stopTFRI1D - startTFRI1D;
+        System.out.println("TFRI1D Time : " + timeElapsedTFRI1D + " nanosecondes");
+
+        double ratioTFR_TF = (double) timeElapsedTF1D / (double) timeElapsedTFR1D;
+        double ratioTFRI_TFI = (double) timeElapsedTFI1D / (double) timeElapsedTFRI1D;
+        System.out.println("Transformée Fourrier Rapide /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourrier 🔥 : " + (long) ratioTFR_TF + " fois plus rapide");
+        System.out.println("Transformée Fourrier Rapide Inverse /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourrier Inverse 🔥 : " + (long) ratioTFRI_TFI + " fois plus rapide");
+        */
     }
 }
