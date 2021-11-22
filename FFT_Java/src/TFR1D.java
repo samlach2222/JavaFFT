@@ -23,10 +23,10 @@ public final class TFR1D {
      * @return le résultat de la transformée de Fourier rapide
      */
     public static ArrayList<Complexe> TransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee){
-        // sensTransformee vaux -1 si on fait une transformée rapide 1D
-        // sensTransformee vaux +1 si on fait une transformée rapide inverse 1D
+        // sensTransformee vaut -1 si on fait une transformée rapide 1D
+        // sensTransformee vaut +1 si on fait une transformée rapide inverse 1D
 
-        // tableau temporaire pour inverser les valeurs du tableau
+        // Tableau temporaire pour inverser les valeurs du tableau
         ArrayList<Complexe> tableauTemp = InversionTableau(tableauR1D);
 
 
@@ -37,7 +37,7 @@ public final class TFR1D {
         //ArrayList<Complexe> resultatTransformee = InversionTableau(tableauTemp);
         ArrayList<Complexe> resultatTransformee = tableauTemp;
 
-        // si le sens de la transformée est inverse, on divise chaque élément du tableau par la taille du tableau
+        // Si le sens de la transformée est inverse, on divise chaque élément du tableau par la taille du tableau
         if(SensTransformee == 1){
             for(int i =0; i < tableauR1D.size(); i++){
                 Complexe c = new Complexe(tableauR1D.size(), 0);
@@ -56,25 +56,25 @@ public final class TFR1D {
      * @return le résultat de la transformée de Fourier rapide
      */
     private static ArrayList<Complexe> CalculTransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee){
-        // taille du tableau de complexe
+        // Taille du tableau de complexe
         int tailleTableau = tableauR1D.size();
 
         // Création du tableau de résultat
         ArrayList<Complexe> tableauTransforme = tableauR1D;
 
-        if(tailleTableau != 1){ // si la taille est de 1, on a pas à traiter le tableau
+        if(tailleTableau != 1){ // Si la taille est de 1, on n'a pas à traiter le tableau
             ArrayList<Complexe> part1 = new ArrayList<>();
             ArrayList<Complexe> part2 = new ArrayList<>();
-            for(int x = 0; x < tailleTableau / 2; x++){ // initialisation tableau
+            for(int x = 0; x < tailleTableau / 2; x++){ // Initialisation du tableau
                 part1.add(null);
                 part2.add(null);
             }
 
             for(int i = 0; i < tableauR1D.size(); i++) {
-                if (i % 2 != 0) { // si rang impaire
+                if (i % 2 != 0) { // Si rang impair
                     part1.set(i / 2, tableauR1D.get(i));
                 }
-                else { // si rang impaire
+                else { // Si rang pair
                     part2.set((i + 1 ) / 2, tableauR1D.get(i));
                 }
             }
@@ -104,7 +104,7 @@ public final class TFR1D {
     private static ArrayList<Complexe> InversionTableau(ArrayList<Complexe> tableau){
         int tailleTableau = tableau.size();
         ArrayList<Complexe> nouveauTableau = new ArrayList<Complexe>();
-        for(int x = 0; x < tailleTableau; x++){ // initialisation tableau
+        for(int x = 0; x < tailleTableau; x++){ // Initialisation du tableau
             nouveauTableau.add(null);
         }
         for(int i = 0; i < tailleTableau ; i++){

@@ -9,17 +9,17 @@ public class Complexe {
     /**
      * partie réelle du complexe
      */
-    private double real =0;
+    private double real = 0;
     /**
      * partie imaginaire du complexe
      */
-    private double imag =0; //real, imag sont des variables d'instances
+    private double imag = 0; // real, imag sont des variables d'instances
 
     /**
      * Constructeur de la classe Complexe
      */
     public Complexe() {
-    } // on utilise la valeur par défaut 0 + i0
+    } // On utilise la valeur par défaut 0 + i0
 
     /**
      * Constructeur de la classe Complexe
@@ -42,7 +42,7 @@ public class Complexe {
      * @return retourne la somme des deux complexes
      */
     public Complexe add(Complexe c) {
-        //le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
+        // Le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
         Complexe sum = new Complexe();
         sum.real = real + c.real;
         sum.imag = imag + c.imag;
@@ -69,7 +69,7 @@ public class Complexe {
      * @return le reste de la soustraction
      */
     public Complexe minus(Complexe c) {
-        //le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
+        // Le résultat est aussi un complexe, il faut donc introduire une autre variable de type Complexe
         Complexe sum = new Complexe();
         sum.real = real - c.real;
         sum.imag = imag - c.imag;
@@ -93,7 +93,7 @@ public class Complexe {
      * @return le nombre compexe en chaine de caractères
      */
     public String toString() {
-        // exemple de la méthode prépondérante
+        // Exemple de la méthode prépondérante
         double roundReal = Math.round(this.real*100.0)/100.0;
         double roundImag = Math.round(this.imag*100.0)/100.0;
         if (imag>=0)

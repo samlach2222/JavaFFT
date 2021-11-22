@@ -25,21 +25,21 @@ public final class TF1D {
     public static ArrayList<Complexe> Transformee1D(ArrayList<Complexe> tableau1D, int sensTransformee){
         // Récupération de la taille du tableau
         int N = tableau1D.size();
-        // Création tableau resultats
+        // Création du tableau de résultat
         ArrayList<Complexe> resultat = new ArrayList<Complexe>();
 
         for(int i = 0; i < N; i++) {
             // Création de la variable de somme des éléments du tableau
             Complexe additionLocale = new Complexe(0, 0);
-            for (int j = 0; j < N ; j++) {
-                double teta = (sensTransformee * 2.0 * Math.PI * i * j) / N; // angle teta
-                double realPart = tableau1D.get(j).getReal() * Math.cos(teta); // partie réelle
-                double imagPart = tableau1D.get(j).getImag() * Math.sin(teta); // partie imaginaire
-                Complexe a = new Complexe(realPart, imagPart); // création du nombre complexe
+            for (int j = 0; j < N; j++) {
+                double theta = (sensTransformee * 2.0 * Math.PI * i * j) / N; // Angle thêta
+                double realPart = tableau1D.get(j).getReal() * Math.cos(theta); // Partie réelle
+                double imagPart = tableau1D.get(j).getImag() * Math.sin(theta); // Partie imaginaire
+                Complexe a = new Complexe(realPart, imagPart); // Création du nombre complexe
 
-                additionLocale = additionLocale.add(a); // addition avec les nombres complexes précédents
+                additionLocale = additionLocale.add(a); // Addition avec les nombres complexes précédents
             }
-            if(sensTransformee == 1){ // si sens transformée inverse
+            if(sensTransformee == 1){ // Si sens transformée inverse
                 additionLocale = additionLocale.multiply(new Complexe((double) 1/N, 0));
             }
             resultat.add(additionLocale);
