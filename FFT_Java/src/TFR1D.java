@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Classe pour la Transormée de Fourrier Rapide 1D et Rapide 1D Inverse
+ * Classe pour la Transormée de Fourier Rapide 1D et Rapide 1D Inverse
  * @author Samuel LACHAUD
  * @version 1.2
  */
@@ -16,11 +16,11 @@ public final class TFR1D {
     }
 
     /**
-     * Méthode pour lancer la transformée de fourrier rapide avec les données préparées au préalable.
+     * Méthode pour lancer la transformée de Fourier rapide avec les données préparées au préalable.
      * Lance la méthode "CalculTransformeeRapide1D".
-     * @param tableauR1D tableau 1D auquel on veut appliquer la transformée de Fourrier rapide.
+     * @param tableauR1D tableau 1D auquel on veut appliquer la transformée de Fourier rapide.
      * @param SensTransformee sens de la transformée -1 pour transformée normale et 1 pour transformée inverse
-     * @return le résultat de la transformée de fourrier rapide
+     * @return le résultat de la transformée de Fourier rapide
      */
     public static ArrayList<Complexe> TransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee){
         // sensTransformee vaux -1 si on fait une transformée rapide 1D
@@ -49,11 +49,11 @@ public final class TFR1D {
     }
 
     /**
-     * Méthode calculant la transformée de fourrier rapide.
+     * Méthode calculant la transformée de Fourier rapide.
      * Lancée par la méthode "TransformeeRapide1D".
-     * @param tableauR1D tableau 1D auquel on veut appliquer la transformée de Fourrier rapide.
+     * @param tableauR1D tableau 1D auquel on veut appliquer la transformée de Fourier rapide.
      * @param SensTransformee sens de la transformée -1 pour transformée normale et 1 pour transformée inverse
-     * @return le résultat de la transformée de fourrier rapide
+     * @return le résultat de la transformée de Fourier rapide
      */
     private static ArrayList<Complexe> CalculTransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee){
         // taille du tableau de complexe

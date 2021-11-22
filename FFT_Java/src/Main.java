@@ -150,8 +150,8 @@ public class Main {
 
         double ratioTFR_TF = (double) timeElapsedTF1D / (double) timeElapsedTFR1D;
         double ratioTFRI_TFI = (double) timeElapsedTFI1D / (double) timeElapsedTFRI1D;
-        System.out.println("Transformée Fourrier Rapide /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourrier 🔥 : " + (long) ratioTFR_TF + " fois plus rapide");
-        System.out.println("Transformée Fourrier Rapide Inverse /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourrier Inverse 🔥 : " + (long) ratioTFRI_TFI + " fois plus rapide");
+        System.out.println("Transformée Fourier Rapide /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourier 🔥 : " + (long) ratioTFR_TF + " fois plus rapide");
+        System.out.println("Transformée Fourier Rapide Inverse /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourier Inverse 🔥 : " + (long) ratioTFRI_TFI + " fois plus rapide");
         */
     }
 }

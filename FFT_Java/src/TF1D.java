@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Classe pour la Transormée de Fourrier 1D et 1D Inverse
+ * Classe pour la Transormée de Fourier 1D et 1D Inverse
  * @author Loïs PAZOLA
  * @author Samuel LACHAUD
  * @version 1.3
@@ -17,10 +17,10 @@ public final class TF1D {
     }
 
     /**
-     * Méthode permettant de calculer la Transformée de Fourrier 1D
+     * Méthode permettant de calculer la Transformée de Fourier 1D
      * @param tableau1D tableau 1D de valeurs auquel on veut appliquer la transformée 1D
      * @param sensTransformee sens de la transformée (-1 pour transformée normale, 1 pour transformée inverse)
-     * @return le résultat de la Transformée de Fourrier 1D
+     * @return le résultat de la Transformée de Fourier 1D
      */
     public static ArrayList<Complexe> Transformee1D(ArrayList<Complexe> tableau1D, int sensTransformee){
         // Récupération de la taille du tableau
