@@ -60,7 +60,7 @@ public final class TFR1D {
         int tailleTableau = tableauR1D.size();
 
         // Création du tableau de résultat
-        ArrayList<Complexe> tableauTransforme = tableauR1D;
+        ArrayList<Complexe> tableauTransforme = new ArrayList<Complexe>(tableauR1D);
 
         if(tailleTableau != 1){ // Si la taille est de 1, on n'a pas à traiter le tableau
             ArrayList<Complexe> part1 = new ArrayList<>();
