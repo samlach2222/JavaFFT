@@ -21,31 +21,37 @@ public final class TFR1D {
      * @param tableauR1D tableau 1D auquel on veut appliquer la Transformée de Fourier Rapide.
      * @param SensTransformee sens de la transformée (-1 pour transformée normale, 1 pour transformée inverse)
      * @return le résultat de la Transformée de Fourier Rapide
+     * @throws Exception si la taille du tableau n'est pas une puissance de 2
      */
-    public static ArrayList<Complexe> TransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee){
+    public static ArrayList<Complexe> TransformeeRapide1D(ArrayList<Complexe> tableauR1D, int SensTransformee) throws Exception{
         // sensTransformee vaut -1 si on fait une transformée rapide 1D
         // sensTransformee vaut +1 si on fait une transformée rapide inverse 1D
 
         // Tableau temporaire pour inverser les valeurs du tableau
         ArrayList<Complexe> tableauTemp = InversionTableau(tableauR1D);
 
+        int N = tableauTemp.size();
 
-        // On calcule maintenant la transforméeRapide1D
-        tableauTemp = CalculTransformeeRapide1D(tableauTemp, SensTransformee);
-
-        // Il faut ré-inverser l'ordre du tableau pour obtenir le résultat du calcul
-        //ArrayList<Complexe> resultatTransformee = InversionTableau(tableauTemp);
-        ArrayList<Complexe> resultatTransformee = tableauTemp;
-
-        // Si le sens de la transformée est inverse, on divise chaque élément du tableau par la taille du tableau
-        if(SensTransformee == 1){
-            for(int i =0; i < tableauR1D.size(); i++){
-                Complexe c = new Complexe(tableauR1D.size(), 0);
-                resultatTransformee.set(i, resultatTransformee.get(i).divide(c));
-            }
+        if((N & (N - 1)) != 0){
+            throw new Exception("Le tableau doit avoir comme taille une puissance de 2 !");
         }
+        else{
+            // On calcule maintenant la transforméeRapide1D
+            tableauTemp = CalculTransformeeRapide1D(tableauTemp, SensTransformee);
 
-        return resultatTransformee;
+            // Il faut ré-inverser l'ordre du tableau pour obtenir le résultat du calcul
+            //ArrayList<Complexe> resultatTransformee = InversionTableau(tableauTemp);
+            ArrayList<Complexe> resultatTransformee = tableauTemp;
+
+            // Si le sens de la transformée est inverse, on divise chaque élément du tableau par la taille du tableau
+            if(SensTransformee == 1){
+                for(int i =0; i < N; i++){
+                    Complexe c = new Complexe(N, 0);
+                    resultatTransformee.set(i, resultatTransformee.get(i).divide(c));
+                }
+            }
+            return resultatTransformee;
+        }
     }
 
     /**

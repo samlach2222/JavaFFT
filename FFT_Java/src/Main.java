@@ -8,7 +8,7 @@ public class Main {
      * Méthode principale
      * @param args arguments de lancement
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         /*--------------------------*/
         /* Initialisation attributs */
         /*--------------------------*/
