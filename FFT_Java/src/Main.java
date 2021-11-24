@@ -34,22 +34,22 @@ public class Main {
         // Valeurs initiales --> valeurs transformées (TF)
         tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
+        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 - i2.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  2.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i0.0
+        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i2.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
 
         // Valeurs transformées --> valeurs initiales (TFI)
         /*
         tableau1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
+        tableau1D.add(new Complexe(-4.0,-2.0)); //  1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
         tableau1D.add(new Complexe(2.0,0.0));  // -1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,0.0)); //  1.0 + i0.0
+        tableau1D.add(new Complexe(-4.0,2.0)); //  1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
         */
 
