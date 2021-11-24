@@ -32,6 +32,7 @@ public class Main {
         /*---------------------*/
 
         // Valeurs initiales --> valeurs transformées (TF)
+
         tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 - i2.0
@@ -40,6 +41,7 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i2.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
+
 
         // Valeurs transformées --> valeurs initiales (TFI)
         /*
@@ -54,7 +56,7 @@ public class Main {
         */
 
         // PERMET DE METTRE LA TRANSFORMÉE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMÉE INVERSE
-        tableau1D = TF1D.Transformee1D(tableau1D, -1);
+        //tableau1D = TF1D.Transformee1D(tableau1D, -1);
 
         /*----------------------------------------*/
         /* Affichage du tableau avant transformée */
@@ -69,41 +71,39 @@ public class Main {
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-        /*
+
         System.out.println("Transformée 1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,-1)) {
             System.out.println(c.toString());
         }
-        */
 
 
         /*------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D */
         /*------------------------------------------------------*/
         /*
-        System.out.println("Transformée rapide I1D:");
+        System.out.println("Transformée rapide 1D:");
         for (Complexe c : TFR1D.TransformeeRapide1D(tableau1D,-1)){
             System.out.println(c.toString());
         }
         */
 
-
         /*---------------------------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
         /*---------------------------------------------------------------*/
 
+        tableau1D = TF1D.Transformee1D(tableau1D, -1);
         System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
         }
-
-
-
+        
 
         /*----------------------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D en mode Inverse */
         /*----------------------------------------------------------------------*/
         /*
+        tableau1D = TFR1D.TransformeeRapide1D(tableau1D, -1);
         System.out.println("Transformée rapide I1D:");
         for (Complexe c : TFR1D.TransformeeRapide1D(tableau1D,1)){
             System.out.println(c.toString());
