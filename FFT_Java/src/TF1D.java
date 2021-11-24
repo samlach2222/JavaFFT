@@ -45,8 +45,8 @@ public final class TF1D {
 
                     additionLocale = additionLocale.add(a); // Addition avec les nombres complexes précédents
                 }
-                if(sensTransformee == 1){ // Si sens transformée inverse
-                    additionLocale = additionLocale.multiply(new Complexe((double) 1/N, 0));
+                if(sensTransformee == 1){ // Si sens transformé inverse
+                    additionLocale = additionLocale.multiply(1.0/N);
                 }
                 resultat.add(additionLocale);
             }

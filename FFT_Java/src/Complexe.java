@@ -89,6 +89,18 @@ public class Complexe {
     }
 
     /**
+     * Méthode permettant de multiplier ce complexe par un nombre
+     * @param d multiplicateur de l'opération
+     * @return le produit du complexe par le nombre
+     */
+    public Complexe multiply(double d) {
+        Complexe product = new Complexe();
+        product.real = real*d;
+        product.imag = imag*d;
+        return product;
+    }
+
+    /**
      * Méthode permettant de retourner sous forme de String un nombre complexe sous la forme x.x+iy.y
      * @return le nombre complexe en chaine de caractères
      */
