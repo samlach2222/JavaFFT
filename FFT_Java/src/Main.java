@@ -97,7 +97,7 @@ public class Main {
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
         }
-        
+
 
         /*----------------------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D en mode Inverse */
