@@ -71,9 +71,9 @@ public class Main {
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-
+        tableau1D = TF1D.Transformee1D(tableau1D, -1);
         System.out.println("Transformée 1D:");
-        for (Complexe c : TF1D.Transformee1D(tableau1D,-1)) {
+        for (Complexe c : tableau1D) {
             System.out.println(c.toString());
         }
 
@@ -92,7 +92,7 @@ public class Main {
         /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
         /*---------------------------------------------------------------*/
 
-        tableau1D = TF1D.Transformee1D(tableau1D, -1);
+
         System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
