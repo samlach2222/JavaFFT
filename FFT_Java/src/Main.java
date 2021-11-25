@@ -92,7 +92,7 @@ public class Main {
         /*-----------------------------------------------*/
 
         System.out.println("Transformée 1D:");
-        Affichage.AfficherTableau1D(tableau1D);
+        Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, -1));
 
 
         /*------------------------------------------------------*/
@@ -100,7 +100,7 @@ public class Main {
         /*------------------------------------------------------*/
         /*
         System.out.println("Transformée rapide 1D:");
-        Affichage.AfficherTableau1D(tableau1D);
+        Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, -1));
         */
 
         /*---------------------------------------------------------------*/
@@ -108,7 +108,7 @@ public class Main {
         /*---------------------------------------------------------------*/
         /*
         System.out.println("Transformée inverse I1D:");
-        Affichage.AfficherTableau1D(tableau1D);
+        Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, 1));
         */
 
         /*----------------------------------------------------------------------*/
@@ -116,7 +116,7 @@ public class Main {
         /*----------------------------------------------------------------------*/
         /*
         System.out.println("Transformée rapide I1D:");
-        Affichage.AfficherTableau1D(tableau1D);
+        Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, 1));
         */
 
         /*-----------------------------------------------*/
