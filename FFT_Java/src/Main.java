@@ -14,9 +14,12 @@ public class Main {
         /*--------------------------*/
         final int ranMin = -5;
         final int ranMax = 5;
-        int N = 8; // N = taille du tableau
+        int N = 8; // N = taille du tableau 1D et longueur du tableau 2D
+        int M = 2; // M = hauteur du tableau 2D
 
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
+        ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
+        for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau 2D en ajoutant N ArrayLists
 
         /*----------------------------------------------------*/
         /* Remplissage du tableau avec des valeurs aléatoires */
@@ -26,11 +29,16 @@ public class Main {
 	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
         }
         */
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++){
+                tableau2D.get(i).add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
+            }
+        }
 
         /*---------------------*/
         /* DEBUG INSERT VALUES */
         /*---------------------*/
-
+        //---------1D----------//
         // Valeurs initiales --> valeurs transformées (TF)
 
         tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
@@ -41,7 +49,6 @@ public class Main {
         tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
         tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i2.0
         tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
-
 
         // Valeurs transformées --> valeurs initiales (TFI)
         /*
@@ -54,29 +61,43 @@ public class Main {
         tableau1D.add(new Complexe(-4.0,2.0)); //  1.0 + i0.0
         tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
         */
-
         // PERMET DE METTRE LA TRANSFORMÉE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMÉE INVERSE
         //tableau1D = TF1D.Transformee1D(tableau1D, -1);
+        //---------2D----------//
 
-        /*----------------------------------------*/
-        /* Affichage du tableau avant transformée */
-        /*----------------------------------------*/
+
+        /*--------------------------------------------*/
+        /* Affichage du tableau 1D avant transformées */
+        /*--------------------------------------------*/
         /*
-        System.out.println("Tableau avant transformée :");
+        System.out.println("Tableau 1D avant transformées :");
         for (Complexe c : tableau1D){
             System.out.println(c);
         }
         */
 
+        /*--------------------------------------------*/
+        /* Affichage du tableau 2D avant transformées */
+        /*--------------------------------------------*/
+
+        System.out.println("Tableau 2D avant transformées :");
+        for (int i = 0; i < N; i++) {
+            System.out.println(i+":");
+            for (Complexe c : tableau2D.get(i)){
+                System.out.println("\t"+c);
+            }
+        }
+
+
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-        tableau1D = TF1D.Transformee1D(tableau1D, -1);
+        /*
         System.out.println("Transformée 1D:");
-        for (Complexe c : tableau1D) {
+        for (Complexe c : TF1D.Transformee1D(tableau1D, -1)) {
             System.out.println(c.toString());
         }
-
+        */
 
         /*------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D */
@@ -91,13 +112,12 @@ public class Main {
         /*---------------------------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
         /*---------------------------------------------------------------*/
-
-
+        /*
         System.out.println("Transformée inverse I1D:");
         for (Complexe c : TF1D.Transformee1D(tableau1D,1)){
             System.out.println(c.toString());
         }
-
+        */
 
         /*----------------------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D en mode Inverse */
@@ -109,6 +129,33 @@ public class Main {
             System.out.println(c.toString());
         }
         */
+
+        /*-----------------------------------------------*/
+        /* Affichage des résultats de TF2D.Transformee2D */
+        /*-----------------------------------------------*/
+
+        System.out.println("Transformée 2D:");
+        for (int i = 0; i < N; i++) {
+            System.out.println(i+":");
+            for (Complexe c : tableau2D.get(i)){
+                System.out.println("\t"+c);
+            }
+        }
+
+
+        /*---------------------------------------------------------------*/
+        /* Affichage des résultats de TF2D.Transformee2D en mode Inverse */
+        /*---------------------------------------------------------------*/
+
+        System.out.println("Transformée inverse I2D:");
+        for (int i = 0; i < N; i++) {
+            System.out.println(i+":");
+            for (Complexe c : tableau2D.get(i)){
+                System.out.println("\t"+c);
+            }
+        }
+
+
 
         /*-----------------------------------------------------------------*/
         /*-----------------------------------------------------------------*/
