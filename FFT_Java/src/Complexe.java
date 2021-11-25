@@ -109,9 +109,9 @@ public class Complexe {
     public String toString() {
         //Locale.ROOT permet d'avoir des "." pour les séparateurs décimaux
         if (imag>=0)
-            return String.format(Locale.ROOT,"%.2f",real) + "+i" + String.format(Locale.ROOT,"%.2f",imag);
+            return String.format(Locale.ROOT,"%+.2f",real) + "+i" + String.format(Locale.ROOT,"%.2f",Math.abs(imag));
         else
-            return String.format(Locale.ROOT,"%.2f",real) + "-i" + String.format(Locale.ROOT,"%.2f",imag);
+            return String.format(Locale.ROOT,"%+.2f",real) + "-i" + String.format(Locale.ROOT,"%.2f",Math.abs(imag));
     }
 
     /**
