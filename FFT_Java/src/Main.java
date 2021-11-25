@@ -21,6 +21,15 @@ public class Main {
         ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
         for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau 2D en ajoutant N ArrayLists
 
+
+        /*---------------------------------------------------------------------*/
+        /* Création de l'arraylist d'arraylist de complexe à partir de l'image */
+        /*---------------------------------------------------------------------*/
+        TraitementImage ti = new TraitementImage();
+        ti.ImageToGray();
+        ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
+        Affichage.
+
         /*----------------------------------------------------*/
         /* Remplissage du tableau avec des valeurs aléatoires */
         /*----------------------------------------------------*/
