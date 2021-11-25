@@ -79,12 +79,7 @@ public class Main {
         /*--------------------------------------------*/
 
         System.out.println("Tableau 2D avant transformées :");
-        for (int i = 0; i < N; i++) {
-            System.out.println(i+":");
-            for (Complexe c : tableau2D.get(i)){
-                System.out.println("\t"+c);
-            }
-        }
+        Affichage.AfficherTableau2D(tableau2D);
 
 
         /*-----------------------------------------------*/
@@ -124,12 +119,7 @@ public class Main {
         /*-----------------------------------------------*/
 
         System.out.println("Transformée 2D:");
-        for (int i = 0; i < N; i++) {
-            System.out.println(i+":");
-            for (Complexe c : tableau2D.get(i)){
-                System.out.println("\t"+c);
-            }
-        }
+        Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, -1));
 
 
         /*---------------------------------------------------------------*/
@@ -137,12 +127,7 @@ public class Main {
         /*---------------------------------------------------------------*/
 
         System.out.println("Transformée inverse I2D:");
-        for (int i = 0; i < N; i++) {
-            System.out.println(i+":");
-            for (Complexe c : tableau2D.get(i)){
-                System.out.println("\t"+c);
-            }
-        }
+        Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
 
 
 
