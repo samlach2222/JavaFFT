@@ -47,40 +47,77 @@ public final class Affichage {
      * Affiche un tableau 2D sous forme de... tableau
      * @param tableau2D tableau 2D à afficher
      */
-    public static void AfficherTableau2D(ArrayList<ArrayList<Complexe>> tableau2D) {
-        ArrayList<String> lignes = new ArrayList<String>();
-        final int X = tableau2D.get(0).size();  //Longueur
-        final int Y = tableau2D.size();  //Hauteur
+    public static void AfficherTableau2D(ArrayList<ArrayList<Complexe>> tableau2D) throws Exception {
 
-        for (int i = 0; i < Y + 2; i++){
-            String ligne;
-            if (i == 0) ligne = "┌";
-            else if (i == Y + 1) ligne = "└";
-            else ligne = "|";
+        //Remplis une ArrayList d'Integer avec la longueur maximale de chaque colonne
+        ArrayList<Integer> longestLengths = new ArrayList<Integer>();
+        for (int x = 0; x < tableau2D.get(0).size(); x++){
+            int length = 11;
+            for (int y = 0; y < tableau2D.size(); y++) {
+                final int lengthActuel = tableau2D.get(y).get(x).toString().length();
 
-            for (int j = 0; j < X; j++) {
-                final String complexe;
-                if (i == 0) complexe = tableau2D.get(0).get(j).toString();  //Ligne du bas
-                else if (i == Y + 1) complexe = tableau2D.get(Y - 1).get(j).toString();  //Ligne du haut
-                else complexe = tableau2D.get(i - 1).get(j).toString()+ "|";  //Ligne avec valeurs
-
-                if (i != 0 && i != Y + 1) ligne += complexe;
-                else ligne += "-".repeat(complexe.length());
-
-                if (j != X - 1) {
-                    if (i == 0) ligne += "┬";  //Ligne du haut
-                    else if (i == Y+1) ligne += "┴";  //Ligne du bas
-                    //else ligne += "┼";  //Ligne séparatrice
-                }
+                if (lengthActuel > length) length = lengthActuel;
             }
-            if (i == 0) ligne += "┐";
-            else if (i == Y+1) ligne += "┘";
 
-            lignes.add(ligne);
+            longestLengths.add(length);
         }
 
-        for (String ligne : lignes){
-            System.out.println(ligne);
+        //Affiche chaque ligne avec la méthode AfficherLigneTableau
+        AfficherLigneTableau(tableau2D.get(0), 0, longestLengths);
+        for (ArrayList<Complexe> ac : tableau2D){
+            AfficherLigneTableau(ac, 1, longestLengths);
         }
+        AfficherLigneTableau(tableau2D.get(tableau2D.size() - 1), 2, longestLengths);
+    }
+
+    /**
+     * Affiche une ligne d'un tableau 1D
+     * @param tableau1D ligne à afficher
+     * @param type 0 pour séparateur haut, 1 pour ligne de valeur, 2 pour séparateur bas
+     * @param longestLengths longueurs maximales de chaque colonne
+     */
+    private static void AfficherLigneTableau(ArrayList<Complexe> tableau1D, int type, ArrayList<Integer> longestLengths) throws Exception {
+        if (type < 0 || type > 2) throw new Exception("Type "+type+" incorrect");
+
+        String ligne = "";
+        switch (type) {
+            case 0:
+                ligne = "┌";
+                break;
+            case 1:
+                ligne = "|";
+                break;
+            case 2:
+                ligne = "└";
+        }
+
+        for (int i = 0; i < tableau1D.size(); i++) {
+            final String complexe = tableau1D.get(i).toString();
+
+            switch (type) {
+                case 1:
+                    ligne += complexe;
+
+                    //Ajout des espaces jusqu'à être arrivé au séprateur de colonne
+                    final int espacesRestants = longestLengths.get(i) - complexe.length();
+                    if (espacesRestants > 0) {
+                        ligne += " ".repeat(espacesRestants);
+                    }
+                    ligne += "|";
+                    break;
+                default:
+                    ligne += "-".repeat(longestLengths.get(i));
+                    break;
+            }
+
+            if (i != tableau1D.size() - 1) {
+                if (type == 0) ligne += "┬";
+                else if (type == 2) ligne += "┴";
+            }
+        }
+        if (type == 0) ligne += "┐";
+        else if (type == 2) ligne += "┘";
+
+        System.out.println(ligne);
     }
 }

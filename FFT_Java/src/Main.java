@@ -15,11 +15,11 @@ public class Main {
         final int ranMin = -5;
         final int ranMax = 5;
         int N = 8; // N = taille du tableau 1D et longueur du tableau 2D
-        int M = 2; // M = hauteur du tableau 2D
+        int M = 4; // M = hauteur du tableau 2D
 
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
         ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
-        for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau 2D en ajoutant N ArrayLists
+        for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau2D en ajoutant N ArrayLists
 
         /*----------------------------------------------------*/
         /* Remplissage du tableau avec des valeurs aléatoires */
@@ -69,7 +69,6 @@ public class Main {
         /*--------------------------------------------*/
         /* Affichage du tableau 1D avant transformées */
         /*--------------------------------------------*/
-
         /*
         System.out.println("Tableau 1D avant transformées :");
         Affichage.AfficherTableau1D(tableau1D);
@@ -79,15 +78,13 @@ public class Main {
         /* Affichage du tableau 2D avant transformées */
         /*--------------------------------------------*/
 
-        /*
         System.out.println("Tableau 2D avant transformées :");
         Affichage.AfficherTableau2D(tableau2D);
-        */
+
 
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
-
         /*
         System.out.println("Transformée 1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, -1));
@@ -107,6 +104,7 @@ public class Main {
         /*
         System.out.println("Transformée inverse I1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, 1));
+        //Affichage.AfficherTableau1D(TF1D.Transformee1D(TF1D.Transformee1D(tableau1D, -1), 1));
         */
 
         /*----------------------------------------------------------------------*/
@@ -115,25 +113,25 @@ public class Main {
         /*
         System.out.println("Transformée rapide I1D:");
         Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, 1));
+        //Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(TFR1D.TransformeeRapide1D(tableau1D, -1), 1));
         */
 
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF2D.Transformee2D */
         /*-----------------------------------------------*/
 
-        /*
         System.out.println("Transformée 2D:");
         Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, -1));
-        */
+
 
         /*---------------------------------------------------------------*/
         /* Affichage des résultats de TF2D.Transformee2D en mode Inverse */
         /*---------------------------------------------------------------*/
 
-        /*
         System.out.println("Transformée inverse I2D:");
-        Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
-        */
+        //Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
+        Affichage.AfficherTableau2D(TF2D.Transformee2D(TF2D.Transformee2D(tableau2D, -1), 1));
+
 
         /*-----------------------------------------------------------------*/
         /*-----------------------------------------------------------------*/
