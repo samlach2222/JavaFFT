@@ -21,15 +21,6 @@ public class Main {
         ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
         for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau 2D en ajoutant N ArrayLists
 
-
-        /*---------------------------------------------------------------------*/
-        /* Création de l'arraylist d'arraylist de complexe à partir de l'image */
-        /*---------------------------------------------------------------------*/
-        TraitementImage ti = new TraitementImage();
-        ti.ImageToGray();
-        ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
-        Affichage.
-
         /*----------------------------------------------------*/
         /* Remplissage du tableau avec des valeurs aléatoires */
         /*----------------------------------------------------*/
@@ -79,25 +70,28 @@ public class Main {
         /* Affichage du tableau 1D avant transformées */
         /*--------------------------------------------*/
 
+        /*
         System.out.println("Tableau 1D avant transformées :");
         Affichage.AfficherTableau1D(tableau1D);
-
+        */
 
         /*--------------------------------------------*/
         /* Affichage du tableau 2D avant transformées */
         /*--------------------------------------------*/
 
+        /*
         System.out.println("Tableau 2D avant transformées :");
         Affichage.AfficherTableau2D(tableau2D);
-
+        */
 
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
         /*-----------------------------------------------*/
 
+        /*
         System.out.println("Transformée 1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, -1));
-
+        */
 
         /*------------------------------------------------------*/
         /* Affichage des résultats de TFR1D.TransformeeRapide1D */
@@ -127,18 +121,19 @@ public class Main {
         /* Affichage des résultats de TF2D.Transformee2D */
         /*-----------------------------------------------*/
 
+        /*
         System.out.println("Transformée 2D:");
         Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, -1));
-
+        */
 
         /*---------------------------------------------------------------*/
         /* Affichage des résultats de TF2D.Transformee2D en mode Inverse */
         /*---------------------------------------------------------------*/
 
+        /*
         System.out.println("Transformée inverse I2D:");
         Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
-
-
+        */
 
         /*-----------------------------------------------------------------*/
         /*-----------------------------------------------------------------*/
@@ -181,5 +176,13 @@ public class Main {
         System.out.println("Transformée Fourier Rapide /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourier 🔥 : " + (long) ratioTFR_TF + " fois plus rapide");
         System.out.println("Transformée Fourier Rapide Inverse /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourier Inverse 🔥 : " + (long) ratioTFRI_TFI + " fois plus rapide");
         */
+
+        /*---------------------------------------------------------------------*/
+        /* Création de l'arraylist d'arraylist de complexe à partir de l'image */
+        /*---------------------------------------------------------------------*/
+        TraitementImage ti = new TraitementImage();
+        ti.ImageToGray();
+        ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
+        //Affichage.AfficherTableau2D(image);
     }
 }

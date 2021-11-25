@@ -40,6 +40,7 @@ public class TraitementImage {
     public ArrayList<ArrayList<Complexe>> GetArrayListFromImage(){
         ArrayList<ArrayList<Complexe>> result = new ArrayList<ArrayList<Complexe>>();
         for(int i=0; i<height; i++) {
+            result.add(new ArrayList<Complexe>());
             for(int j=0; j<width; j++) {
                 Color c = new Color(image.getRGB(j, i));
                 int red = (c.getRed());
@@ -50,6 +51,15 @@ public class TraitementImage {
             }
         }
         return result;
+    }
+
+    public void createImageFromArrayList(ArrayList<ArrayList<Complexe>> array){
+        for(int i=0; i<array.size(); i++) {
+            for(int j=0; j<array.get(i).size(); j++){
+                double value = array.get(i).get(j).getReal();
+                // recréer couleur à partir de ça get la couleur d'un pixel en "gris" et la set en "gris"
+            }
+        }
     }
 
     public TraitementImage() throws Exception{
