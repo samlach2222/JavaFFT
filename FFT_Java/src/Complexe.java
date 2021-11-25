@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 /**
  * Classe gérant un nombre complexe composée d'une partie réelle et d'une partie imaginaire
  * Elle décrit également les différentes opérations que l'on peut lui appliquer (addition, soustraction, multiplication, division)
@@ -101,17 +103,15 @@ public class Complexe {
     }
 
     /**
-     * Méthode permettant de retourner sous forme de String un nombre complexe sous la forme x.x+iy.y
+     * Méthode permettant de retourner sous forme de String un nombre complexe sous la forme x.xx+iy.yy
      * @return le nombre complexe en chaine de caractères
      */
     public String toString() {
-        // Exemple de la méthode prépondérante
-        double roundReal = Math.round(this.real*100.0)/100.0;
-        double roundImag = Math.round(this.imag*100.0)/100.0;
+        //Locale.ROOT permet d'avoir des "." pour les séparateurs décimaux
         if (imag>=0)
-            return roundReal + "+i" + Math.abs(roundImag);
+            return String.format(Locale.ROOT,"%.2f",real) + "+i" + String.format(Locale.ROOT,"%.2f",imag);
         else
-            return roundReal + "-i" + Math.abs(roundImag);
+            return String.format(Locale.ROOT,"%.2f",real) + "-i" + String.format(Locale.ROOT,"%.2f",imag);
     }
 
     /**
