@@ -69,10 +69,10 @@ public class Main {
         /*--------------------------------------------*/
         /* Affichage du tableau 1D avant transformées */
         /*--------------------------------------------*/
-        /*
+
         System.out.println("Tableau 1D avant transformées :");
         Affichage.AfficherTableau1D(tableau1D);
-        */
+
 
         /*--------------------------------------------*/
         /* Affichage du tableau 2D avant transformées */
