@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Classe pour la Transformée de Fourier 1D et 1D Inverse
  * @author Loïs PAZOLA
  * @author Samuel LACHAUD
- * @version 1.3
+ * @version 1.4
  */
 public final class TF1D {
 
