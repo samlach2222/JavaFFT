@@ -40,6 +40,7 @@ public final class TF2D {
                 for (int k = 0; k < X; k++) {  //horizontal
                     for (int l = 0; l < Y; l++) {  //vertical
                         double theta = (sensTransformee * 2.0 * Math.PI * i * j * k * l) / (X*Y); // Angle thêta
+
                         final Complexe complexeOriginal = tableau2D.get(k).get(l);
                         double realPart = complexeOriginal.getReal() * Math.cos(theta) + complexeOriginal.getImag() * Math.sin(theta); // Partie réelle
                         double imagPart = -complexeOriginal.getReal() * Math.sin(theta) + complexeOriginal.getImag() * Math.cos(theta); // Partie imaginaire

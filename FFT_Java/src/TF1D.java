@@ -34,8 +34,10 @@ public final class TF1D {
             Complexe additionLocale = new Complexe(0, 0);
             for (int j = 0; j < N; j++) {
                 double theta = (sensTransformee * 2.0 * Math.PI * i * j) / N; // Angle thêta
-                double realPart = tableau1D.get(j).getReal() * Math.cos(theta) + tableau1D.get(j).getImag() * Math.sin(theta); // Partie réelle
-                double imagPart = -tableau1D.get(j).getReal() * Math.sin(theta) + tableau1D.get(j).getImag() * Math.cos(theta); // Partie imaginaire
+
+                final Complexe complexeOriginal = tableau1D.get(j);
+                double realPart = complexeOriginal.getReal() * Math.cos(theta) + complexeOriginal.getImag() * Math.sin(theta); // Partie réelle
+                double imagPart = -complexeOriginal.getReal() * Math.sin(theta) + complexeOriginal.getImag() * Math.cos(theta); // Partie imaginaire
                 Complexe a = new Complexe(realPart, imagPart); // Création du nombre complexe
 
                 additionLocale = additionLocale.add(a); // Addition avec les nombres complexes précédents
