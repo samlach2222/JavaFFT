@@ -3,7 +3,6 @@ import java.util.ArrayList;
 /**
  * Classe pour la Transformée de Fourier 2D et 2D Inverse
  * @author Loïs PAZOLA
- * @author Samuel LACHAUD
  * @version 1.1
  */
 public final class TF2D {
