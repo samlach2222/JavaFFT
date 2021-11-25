@@ -89,6 +89,7 @@ public final class Affichage {
                 break;
             case 2:
                 ligne = "└";
+                break;
         }
 
         for (int i = 0; i < tableau1D.size(); i++) {
