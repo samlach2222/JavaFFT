@@ -38,7 +38,7 @@ public final class TF2D {
                 Complexe additionLocale = new Complexe(0, 0);
                 for (int k = 0; k < X; k++) {  //horizontal
                     for (int l = 0; l < Y; l++) {  //vertical
-                        double theta = (sensTransformee * 2.0 * Math.PI * (((double) j*l/Y) + (double) i*k/X)); // Angle thêta
+                        double theta = (sensTransformee * 2.0 * Math.PI * (((double) j*l/Y) + ((double) i*k/X))); // Angle thêta
 
                         final Complexe complexeOriginal = tableau2D.get(k).get(l);
                         double realPart = complexeOriginal.getReal() * Math.cos(theta) + complexeOriginal.getImag() * Math.sin(theta); // Partie réelle
