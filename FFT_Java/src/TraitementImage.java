@@ -52,8 +52,8 @@ public class TraitementImage {
         for(int i=0; i<array.size(); i++) {
             for(int j=0; j<array.get(i).size(); j++){
                 Complexe value = new Complexe(array.get(i).get(j).getReal(), 0);
-                Color c = new Color((int) value.getReal(), (int) value.getReal(), (int) value.getReal());
-                returnImage.setRGB(j,i,c.getRGB());
+                Color c = new Color((int) (value.getReal()*255), (int) (value.getReal()*255), (int) (value.getReal()*255));
+                returnImage.setRGB(j,i,c.getRGB() );
             }
         }
         try {
