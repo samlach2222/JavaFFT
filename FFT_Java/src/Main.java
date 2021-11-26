@@ -29,11 +29,12 @@ public class Main {
 	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
         }
         */
+        /*
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++){
                 tableau2D.get(i).add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
             }
-        }
+        }*/
 
         /*---------------------*/
         /* DEBUG INSERT VALUES */
@@ -78,9 +79,10 @@ public class Main {
         /* Affichage du tableau 2D avant transformées */
         /*--------------------------------------------*/
 
+        /*
         System.out.println("Tableau 2D avant transformées :");
         Affichage.AfficherTableau2D(tableau2D);
-
+        */
 
         /*-----------------------------------------------*/
         /* Affichage des résultats de TF1D.Transformee1D */
@@ -120,18 +122,20 @@ public class Main {
         /* Affichage des résultats de TF2D.Transformee2D */
         /*-----------------------------------------------*/
 
+        /*
         System.out.println("Transformée 2D:");
         Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, -1));
-
+        */
 
         /*---------------------------------------------------------------*/
         /* Affichage des résultats de TF2D.Transformee2D en mode Inverse */
         /*---------------------------------------------------------------*/
 
+        /*
         System.out.println("Transformée inverse I2D:");
         //Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
         Affichage.AfficherTableau2D(TF2D.Transformee2D(TF2D.Transformee2D(tableau2D, -1), 1));
-
+        */
 
         /*-----------------------------------------------------------------*/
         /*-----------------------------------------------------------------*/
@@ -181,6 +185,14 @@ public class Main {
         TraitementImage ti = new TraitementImage();
         ti.ImageToGray();
         ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
-        //Affichage.AfficherTableau2D(image);
+        ArrayList<ArrayList<Complexe>> imageTransformed = new ArrayList<>(TF2D.Transformee2D(image, -1)) ;
+        ArrayList<ArrayList<Complexe>> imageFinal= new ArrayList<>(TF2D.Transformee2D(imageTransformed, 1));
+        //ti.createImageFromArrayList(image);
+        System.out.println("avant transformée");
+        Affichage.AfficherTableau2D(image);
+        System.out.println("Après transformée");
+        Affichage.AfficherTableau2D(imageTransformed);
+        System.out.println("Après transformée inverse");
+        Affichage.AfficherTableau2D(imageFinal);
     }
 }
