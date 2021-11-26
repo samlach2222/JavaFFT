@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -7,8 +8,9 @@ public class Main {
     /**
      * Méthode principale
      * @param args arguments de lancement
+     * @throws IOException si l'image n'est pas possible à obtenir
      */
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         /*--------------------------*/
         /* Initialisation attributs */
         /*--------------------------*/
