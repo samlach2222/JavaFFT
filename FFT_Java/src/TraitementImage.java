@@ -14,7 +14,7 @@ public class TraitementImage {
 
     public void ImageToGray(){
         try {
-            File input = new File("D:\\WINDOWS\\Documents\\GitHub\\FFT-Java\\FFT_Java\\out\\production\\FFT_Java\\image.jpg");
+            File input = new File("image.jpg");
             image = ImageIO.read(input);
             width = image.getWidth();
             height = image.getHeight();
@@ -57,7 +57,7 @@ public class TraitementImage {
             }
         }
         try {
-            File ouptut = new File("D:\\WINDOWS\\Documents\\GitHub\\FFT-Java\\FFT_Java\\out\\production\\FFT_Java\\imageGray.jpg");
+            File ouptut = new File("imageGray.jpg");
             ImageIO.write(returnImage, "jpg", ouptut);
             System.out.println("Done");
         }

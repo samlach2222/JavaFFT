@@ -187,12 +187,12 @@ public class Main {
         ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
         ArrayList<ArrayList<Complexe>> imageTransformed = new ArrayList<>(TF2D.Transformee2D(image, -1)) ;
         ArrayList<ArrayList<Complexe>> imageFinal= new ArrayList<>(TF2D.Transformee2D(imageTransformed, 1));
-        //ti.createImageFromArrayList(image);
-//        System.out.println("avant transformée");
-//        Affichage.AfficherTableau2D(image);
-//        System.out.println("Après transformée");
-//        Affichage.AfficherTableau2D(imageTransformed);
-//        System.out.println("Après transformée inverse");
-//        Affichage.AfficherTableau2D(imageFinal);
+        ti.createImageFromArrayList(imageFinal);
+        System.out.println("avant transformée");
+        Affichage.AfficherTableau2D(image);
+        System.out.println("Après transformée");
+        Affichage.AfficherTableau2D(imageTransformed);
+        System.out.println("Après transformée inverse");
+        Affichage.AfficherTableau2D(imageFinal);
     }
 }
