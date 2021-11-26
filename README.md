@@ -1,4 +1,4 @@
-# FFT-Java - An Algorythm for Fast Fourier Transformation in Java language
+# JavaFFT - An Algorythm for Fast Fourier Transformation in Java language
 
 [![GitHub version](https://img.shields.io/badge/version-1.0-purple.svg)](https://img.shields.io/badge)
 
