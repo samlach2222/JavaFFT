@@ -68,80 +68,43 @@ public class Main {
 
 
         /*--------------------------------------------*/
-        /* Affichage du tableau 1D avant transformées */
+        /* Affichage des transformées 1D */
         /*--------------------------------------------*/
+
         /*
+        // AFFICHAGE DU TABLEAU DE DEPART
         System.out.println("Tableau 1D avant transformées :");
         Affichage.AfficherTableau1D(tableau1D);
         */
 
-        /*--------------------------------------------*/
-        /* Affichage du tableau 2D avant transformées */
-        /*--------------------------------------------*/
-
         /*
-        System.out.println("Tableau 2D avant transformées :");
-        Affichage.AfficherTableau2D(tableau2D);
-        */
-
-        /*-----------------------------------------------*/
-        /* Affichage des résultats de TF1D.Transformee1D */
-        /*-----------------------------------------------*/
-        /*
+        //AFFICHAGE DU RESULTAT DE TF1D.Transformee1D
         System.out.println("Transformée 1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, -1));
         */
 
-        /*------------------------------------------------------*/
-        /* Affichage des résultats de TFR1D.TransformeeRapide1D */
-        /*------------------------------------------------------*/
         /*
+        //AFFICHAGE DU RESULTAT DE TFR1D.TransformeeRapide1D
         System.out.println("Transformée rapide 1D:");
         Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, -1));
         */
 
-        /*---------------------------------------------------------------*/
-        /* Affichage des résultats de TF1D.Transformee1D en mode Inverse */
-        /*---------------------------------------------------------------*/
         /*
+        // AFFICHAGE DU RESULTAT DE TF1D.Transformee1D EN MODE INVERSE
         System.out.println("Transformée inverse I1D:");
-        Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, 1));
-        //Affichage.AfficherTableau1D(TF1D.Transformee1D(TF1D.Transformee1D(tableau1D, -1), 1));
+        Affichage.AfficherTableau1D(TF1D.Transformee1D(TF1D.Transformee1D(tableau1D, -1), 1));
         */
 
-        /*----------------------------------------------------------------------*/
-        /* Affichage des résultats de TFR1D.TransformeeRapide1D en mode Inverse */
-        /*----------------------------------------------------------------------*/
         /*
+        // AFFICHAGE DU RESULTAT DE TFR1D.TransformeeRapide1D EN MODE INVERSE
         System.out.println("Transformée rapide I1D:");
-        Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, 1));
-        //Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(TFR1D.TransformeeRapide1D(tableau1D, -1), 1));
+        Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(TFR1D.TransformeeRapide1D(tableau1D, -1), 1));
         */
 
-        /*-----------------------------------------------*/
-        /* Affichage des résultats de TF2D.Transformee2D */
-        /*-----------------------------------------------*/
-
-        /*
-        System.out.println("Transformée 2D:");
-        Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, -1));
-        */
-
-        /*---------------------------------------------------------------*/
-        /* Affichage des résultats de TF2D.Transformee2D en mode Inverse */
-        /*---------------------------------------------------------------*/
-
-        /*
-        System.out.println("Transformée inverse I2D:");
-        //Affichage.AfficherTableau2D(TF2D.Transformee2D(tableau2D, 1));
-        Affichage.AfficherTableau2D(TF2D.Transformee2D(TF2D.Transformee2D(tableau2D, -1), 1));
-        */
-
-        /*-----------------------------------------------------------------*/
         /*-----------------------------------------------------------------*/
         /*                   CALCUL DU TEMPS D'EXECUTION                   */
         /*-----------------------------------------------------------------*/
-        /*-----------------------------------------------------------------*/
+
         /*
         N = (int) Math.pow(2,14); // Pour avoir une réelle différence sur le temps d'exécution
         tableau1D.clear();
@@ -153,25 +116,40 @@ public class Main {
         tableau1D = TF1D.Transformee1D(tableau1D, -1);
         long stopTF1D = System.nanoTime();
         long timeElapsedTF1D = stopTF1D - startTF1D;
-        System.out.println("TF1D Time : " + timeElapsedTF1D + " nanosecondes");
+        System.out.println("TF1D Time : " + timeElapsedTF1D/1000000 + " milliseconds");
 
         long startTFI1D = System.nanoTime();
         tableau1D = TF1D.Transformee1D(tableau1D, 1);
         long stopTFI1D = System.nanoTime();
         long timeElapsedTFI1D = stopTFI1D - startTFI1D;
-        System.out.println("TFI1D Time : " + timeElapsedTFI1D + " nanosecondes");
+        System.out.println("TFI1D Time : " + timeElapsedTFI1D/1000000 + " milliseconds");
 
         long startTFR1D = System.nanoTime();
         tableau1D = TFR1D.TransformeeRapide1D(tableau1D, -1);
         long stopTFR1D = System.nanoTime();
         long timeElapsedTFR1D = stopTFR1D - startTFR1D;
-        System.out.println("TFR1D Time : " + timeElapsedTFR1D + " nanosecondes");
+        System.out.println("TFR1D Time : " + timeElapsedTFR1D/1000000 + " milliseconds");
 
         long startTFRI1D = System.nanoTime();
         tableau1D = TFR1D.TransformeeRapide1D(tableau1D, 1);
         long stopTFRI1D = System.nanoTime();
         long timeElapsedTFRI1D = stopTFRI1D - startTFRI1D;
-        System.out.println("TFRI1D Time : " + timeElapsedTFRI1D + " nanosecondes");
+        System.out.println("TFRI1D Time : " + timeElapsedTFRI1D/1000000 + " milliseconds");
+
+        TraitementImage ti = new TraitementImage();
+        ti.ImageToGray();
+        ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
+        long startTF2D = System.nanoTime();
+        tableau2D = TF2D.Transformee2D(image, -1);
+        long stopTF2D = System.nanoTime();
+        long timeElapsedTF2D = stopTF2D - startTF2D;
+        System.out.println("TF2D Time for 40*59 image : " + timeElapsedTF2D/1000000 + " milliseconds");
+
+        long startTFI2D = System.nanoTime();
+        tableau2D = TF2D.Transformee2D(image, 1);
+        long stopTFI2D = System.nanoTime();
+        long timeElapsedTFI2D = stopTFI2D - startTFI2D;
+        System.out.println("TFI2F Time for 40*59 image : " + timeElapsedTFI2D/1000000 + " milliseconds\n");
 
         double ratioTFR_TF = (double) timeElapsedTF1D / (double) timeElapsedTFR1D;
         double ratioTFRI_TFI = (double) timeElapsedTFI1D / (double) timeElapsedTFRI1D;
@@ -182,6 +160,8 @@ public class Main {
         /*---------------------------------------------------------------------*/
         /* Création de l'arraylist d'arraylist de complexe à partir de l'image */
         /*---------------------------------------------------------------------*/
+
+        /*
         TraitementImage ti = new TraitementImage();
         ti.ImageToGray();
         ArrayList<ArrayList<Complexe>> image = ti.GetArrayListFromImage();
@@ -194,5 +174,6 @@ public class Main {
         Affichage.AfficherTableau2D(imageTransformed);
         System.out.println("Après transformée inverse");
         Affichage.AfficherTableau2D(imageFinal);
+        */
     }
 }
