@@ -46,6 +46,7 @@ public final class Affichage {
     /**
      * Affiche un tableau 2D sous forme de... tableau
      * @param tableau2D tableau 2D à afficher
+     * @throws Exception quand le numéro envoyé pour obtenir le caractère associé est incorect.
      */
     public static void AfficherTableau2D(ArrayList<ArrayList<Complexe>> tableau2D) throws Exception {
 
@@ -75,6 +76,7 @@ public final class Affichage {
      * @param tableau1D ligne à afficher
      * @param type 0 pour séparateur haut, 1 pour ligne de valeur, 2 pour séparateur bas
      * @param longestLengths longueurs maximales de chaque colonne
+     * @throws Exception quand le numéro envoyé pour obtenir le caractère associé est incorect.
      */
     private static void AfficherLigneTableau(ArrayList<Complexe> tableau1D, int type, ArrayList<Integer> longestLengths) throws Exception {
         if (type < 0 || type > 2) throw new Exception("Type "+type+" incorrect");

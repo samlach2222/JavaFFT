@@ -8,7 +8,7 @@ public class Main {
      * Méthode principale
      * @param args arguments de lancement
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         /*--------------------------*/
         /* Initialisation attributs */
         /*--------------------------*/
@@ -16,59 +16,32 @@ public class Main {
         final int ranMax = 5;
         int N = 8; // N = taille du tableau 1D et longueur du tableau 2D
         int M = 4; // M = hauteur du tableau 2D
-
         ArrayList<Complexe> tableau1D = new ArrayList<Complexe>();
         ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
         for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau2D en ajoutant N ArrayLists
 
-        /*----------------------------------------------------*/
-        /* Remplissage du tableau avec des valeurs aléatoires */
-        /*----------------------------------------------------*/
+        /*---------------------------*/
+        /*  Remplissage des tableaux */
+        /*---------------------------*/
+
         /*
+        // REMPLISSAGE DU TABLEAU 1D AVEC DES VALEURS ALEATOIRES
         for(int i = 0; i < N; i++) {
 	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
         }
         */
+
         /*
+        // REMPLISSAGE DU TABLEAU 2D AVEC DES VALEURS ALEATOIRES
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++){
                 tableau2D.get(i).add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
             }
-        }*/
-
-        /*---------------------*/
-        /* DEBUG INSERT VALUES */
-        /*---------------------*/
-        //---------1D----------//
-        // Valeurs initiales --> valeurs transformées (TF)
-
-        tableau1D.add(new Complexe(-1.0,0.0)); // -2.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 - i2.0
-        tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
-        tableau1D.add(new Complexe(-1.0,0.0)); //  2.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(1.0,0.0));  // -4.0 + i2.0
-        tableau1D.add(new Complexe(-1.0,0.0)); //  0.0 + i0.0
-
-        // Valeurs transformées --> valeurs initiales (TFI)
-        /*
-        tableau1D.add(new Complexe(-2.0,0.0)); // -1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,-2.0)); //  1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
-        tableau1D.add(new Complexe(2.0,0.0));  // -1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  //  0.0 + i0.0
-        tableau1D.add(new Complexe(-4.0,2.0)); //  1.0 + i0.0
-        tableau1D.add(new Complexe(0.0,0.0));  // -1.0 + i0.0
+        }
         */
-        // PERMET DE METTRE LA TRANSFORMÉE DANS LE TABLEAU POUR UNE APPLICATION FUTURE DE LA TRANSFORMÉE INVERSE
-        //tableau1D = TF1D.Transformee1D(tableau1D, -1);
-        //---------2D----------//
-
 
         /*--------------------------------------------*/
-        /* Affichage des transformées 1D */
+        /*        Affichage des transformées 1D       */
         /*--------------------------------------------*/
 
         /*
@@ -157,9 +130,9 @@ public class Main {
         System.out.println("Transformée Fourier Rapide Inverse /\uD835\uDD4D\uD835\uDD4A\\ Transformée Fourier Inverse 🔥 : " + (long) ratioTFRI_TFI + " fois plus rapide");
         */
 
-        /*---------------------------------------------------------------------*/
-        /* Création de l'arraylist d'arraylist de complexe à partir de l'image */
-        /*---------------------------------------------------------------------*/
+        /*------------------------------------------------------------------------------------------*/
+        /* Image --> ArrayList<ArrayList<Complexe>> | TF2D(ArrayList) | TFI2D(ArrayList) --> Image2 */
+        /*------------------------------------------------------------------------------------------*/
 
         /*
         TraitementImage ti = new TraitementImage();
