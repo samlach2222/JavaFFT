@@ -8,9 +8,9 @@ public class Main {
     /**
      * Méthode principale
      * @param args arguments de lancement
-     * @throws IOException si l'image n'est pas possible à obtenir
+     * @throws Exception si une exception se produit
      */
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws Exception {
         /*--------------------------*/
         /* Initialisation attributs */
         /*--------------------------*/
@@ -22,19 +22,19 @@ public class Main {
         ArrayList<ArrayList<Complexe>> tableau2D = new ArrayList<ArrayList<Complexe>>();
         for (int i = 0; i < N; i++) tableau2D.add(new ArrayList<Complexe>());  //Initialise tableau2D en ajoutant N ArrayLists
 
-        /*---------------------------*/
-        /*  Remplissage des tableaux */
-        /*---------------------------*/
+        /*----------------------------*/
+        /*  Remplissage des tableaux  */
+        /*----------------------------*/
 
-        /*
         // REMPLISSAGE DU TABLEAU 1D AVEC DES VALEURS ALEATOIRES
+        /*
         for(int i = 0; i < N; i++) {
 	        tableau1D.add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
         }
         */
 
-        /*
         // REMPLISSAGE DU TABLEAU 2D AVEC DES VALEURS ALEATOIRES
+        /*
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++){
                 tableau2D.get(i).add(new Complexe(Math.random()*(ranMax-ranMin+1)+ranMin,Math.random()*(ranMax-ranMin+1)+ranMin)); // Nombre complexe aléatoire entre -5 et 5 sur ses deux parties
@@ -42,43 +42,43 @@ public class Main {
         }
         */
 
-        /*--------------------------------------------*/
-        /*        Affichage des transformées 1D       */
-        /*--------------------------------------------*/
+        /*-------------------------------*/
+        /* Affichage des transformées 1D */
+        /*-------------------------------*/
 
-        /*
         // AFFICHAGE DU TABLEAU DE DEPART
+        /*
         System.out.println("Tableau 1D avant transformées :");
         Affichage.AfficherTableau1D(tableau1D);
         */
 
-        /*
         //AFFICHAGE DU RESULTAT DE TF1D.Transformee1D
+        /*
         System.out.println("Transformée 1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(tableau1D, -1));
         */
 
-        /*
         //AFFICHAGE DU RESULTAT DE TFR1D.TransformeeRapide1D
+        /*
         System.out.println("Transformée rapide 1D:");
         Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(tableau1D, -1));
         */
 
-        /*
         // AFFICHAGE DU RESULTAT DE TF1D.Transformee1D EN MODE INVERSE
+        /*
         System.out.println("Transformée inverse I1D:");
         Affichage.AfficherTableau1D(TF1D.Transformee1D(TF1D.Transformee1D(tableau1D, -1), 1));
         */
 
-        /*
         // AFFICHAGE DU RESULTAT DE TFR1D.TransformeeRapide1D EN MODE INVERSE
+        /*
         System.out.println("Transformée rapide I1D:");
         Affichage.AfficherTableau1D(TFR1D.TransformeeRapide1D(TFR1D.TransformeeRapide1D(tableau1D, -1), 1));
         */
 
-        /*-----------------------------------------------------------------*/
-        /*                   CALCUL DU TEMPS D'EXECUTION                   */
-        /*-----------------------------------------------------------------*/
+        /*---------------------------------*/
+        /*   Calcul du temps d'exécution   */
+        /*---------------------------------*/
 
         /*
         N = (int) Math.pow(2,14); // Pour avoir une réelle différence sur le temps d'exécution
